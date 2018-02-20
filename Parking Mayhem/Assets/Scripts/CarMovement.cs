@@ -4,25 +4,67 @@ using UnityEngine;
 
 public class CarMovement : MonoBehaviour {
 
-    public float speed = 1.5f;
+	public float power = 3;
+	public float maxspeed = 5;
+	public float turnpower = 2;
+	public float friction = 3;
+	public Vector2 curspeed ;
+	Rigidbody2D rigidbody2D;
 
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.position += Vector3.left * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.position += Vector3.up * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.position += Vector3.down * speed * Time.deltaTime;
-        }
-    }
+	// Use this for initialization
+	void Start () {
+		rigidbody2D = GetComponent<Rigidbody2D>();
+	}
+
+
+	void FixedUpdate()
+	{
+		curspeed = new Vector2(rigidbody2D.velocity.x,    rigidbody2D.velocity.y);
+
+		if (curspeed.magnitude > maxspeed)
+		{
+			curspeed = curspeed.normalized;
+			curspeed *= maxspeed;
+		}
+
+		if (Input.GetKey(KeyCode.UpArrow))
+		{
+			rigidbody2D.AddForce(transform.up * power);
+			rigidbody2D.drag = friction;
+		}
+		if (Input.GetKey(KeyCode.DownArrow))
+		{
+			rigidbody2D.AddForce(-(transform.up) * (power/2));
+			rigidbody2D.drag = friction;
+		}
+		if (Input.GetKey(KeyCode.LeftArrow))
+		{
+			transform.Rotate(Vector3.forward * turnpower);
+		}
+		if (Input.GetKey(KeyCode.RightArrow))
+		{
+			transform.Rotate(Vector3.forward * -turnpower);
+		}
+
+		noGas();
+
+	}
+
+	void noGas()
+	{
+		bool gas;
+		if(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
+		{
+			gas = true;
+		}
+		else
+		{
+			gas = false;
+		}
+
+		if (!gas)
+		{
+			rigidbody2D.drag = friction * 2;
+		}
+	}
 }

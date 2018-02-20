@@ -1,9 +1,32 @@
 fileFormatVersion: 2
 guid: eda98d111aba7fe4fb8675b90b7d1718
-timeCreated: 1519137458
-licenseType: Pro
+timeCreated: 1519157901
+licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hjm-bushes_01-alpha_0
+    21300002: hjm-bushes_01-alpha_1
+    21300004: hjm-bushes_01-alpha_2
+    21300006: hjm-bushes_01-alpha_3
+    21300008: hjm-bushes_01-alpha_4
+    21300010: hjm-bushes_01-alpha_5
+    21300012: hjm-bushes_01-alpha_6
+    21300014: hjm-bushes_01-alpha_7
+    21300016: hjm-bushes_01-alpha_8
+    21300018: hjm-bushes_01-alpha_9
+    21300020: hjm-bushes_01-alpha_10
+    21300022: hjm-bushes_01-alpha_11
+    21300024: hjm-bushes_01-alpha_12
+    21300026: hjm-bushes_01-alpha_13
+    21300028: hjm-bushes_01-alpha_14
+    21300030: hjm-bushes_01-alpha_15
+    21300032: hjm-bushes_01-alpha_16
+    21300034: hjm-bushes_01-alpha_17
+    21300036: hjm-bushes_01-alpha_18
+    21300038: hjm-bushes_01-alpha_19
+    21300040: hjm-bushes_01-alpha_20
+    21300042: hjm-bushes_01-alpha_21
+    21300044: hjm-bushes_01-alpha_22
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -31,7 +54,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -40,13 +63,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -66,9 +89,103 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: hjm-bushes_01-alpha_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 362
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hjm-bushes_01-alpha_1
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 362
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hjm-bushes_01-alpha_2
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 362
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hjm-bushes_01-alpha_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 160
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hjm-bushes_01-alpha_4
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 221
+        width: 100
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hjm-bushes_01-alpha_5
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 160
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
