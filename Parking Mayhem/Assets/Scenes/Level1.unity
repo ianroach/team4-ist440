@@ -1927,7 +1927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61c926c580fd9d45923b447312957e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDelay: 1.5
+  spawnDelay: 10
   pedestrian:
   - {fileID: 1984697735718098, guid: a387fc2242646654bb3d0943bdd432a7, type: 2}
   spawnPoints:
