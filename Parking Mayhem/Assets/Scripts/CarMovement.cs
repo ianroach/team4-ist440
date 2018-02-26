@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class CarMovement : MonoBehaviour {
@@ -67,4 +68,11 @@ public class CarMovement : MonoBehaviour {
 			rigidbody2D.drag = friction * 2;
 		}
 	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Car")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
 }
