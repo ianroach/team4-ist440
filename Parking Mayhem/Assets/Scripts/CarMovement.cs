@@ -10,7 +10,7 @@ public class CarMovement : MonoBehaviour {
 	public float turnpower = 2;
 	public float friction = 3;
 	public Vector2 curspeed ;
-	Rigidbody2D rigidbody2D;
+     Rigidbody2D rigidbody2D;
 
 	// Use this for initialization
 	void Start () {
@@ -71,6 +71,10 @@ public class CarMovement : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Car")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else if (collision.tag == "Gsol")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
