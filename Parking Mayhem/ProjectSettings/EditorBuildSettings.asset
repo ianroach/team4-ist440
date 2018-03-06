@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Parking_Mayhem_Menu.unity
+    guid: 0bd1a5fef764e374fa807c5e3318dcba
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: a273d736813055c408426658c35fc4de
