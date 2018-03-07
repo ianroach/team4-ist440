@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Car
   - Gsol
+  - PickUp
   layers:
   - Default
   - TransparentFX
