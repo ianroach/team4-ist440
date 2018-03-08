@@ -15,8 +15,11 @@ public class CarMovement : MonoBehaviour
     public int maxHealth = 4;
     public Vector2 curspeed;
     public Text ScoreText;
+    public Text CoinPlus;
     public Vector3 StartPosition;
     public Quaternion RotatePosition;
+
+    
 
     new Rigidbody2D rigidbody2D;
     private int count;
@@ -29,6 +32,7 @@ public class CarMovement : MonoBehaviour
         StartPosition = transform.position;
         RotatePosition = transform.rotation;
         count = 0;
+        CoinPlus.text = "";
         SetScoreText();
         
 
@@ -102,12 +106,18 @@ public class CarMovement : MonoBehaviour
             Destroy(collision.gameObject);
             count += 50;
             SetScoreText();
+          
+            
         }
     }
     void SetScoreText()
        
     {
         ScoreText.text = "Score: " + count.ToString();
+        if (count == 1) {
+            CoinPlus.text = "+50";
+          
+        }
     }
     private void Reset()
     {
