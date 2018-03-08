@@ -12,6 +12,7 @@ public class CarMovement : MonoBehaviour
     public float maxspeed = 5;
     public float turnpower = 2;
     public float friction = 3;
+    public int maxHealth = 4;
     public Vector2 curspeed;
     public Text ScoreText;
     public Vector3 StartPosition;
@@ -19,6 +20,7 @@ public class CarMovement : MonoBehaviour
 
     new Rigidbody2D rigidbody2D;
     private int count;
+    
 
     // Use this for initialization
     void Start()
@@ -28,6 +30,7 @@ public class CarMovement : MonoBehaviour
         RotatePosition = transform.rotation;
         count = 0;
         SetScoreText();
+        
 
     }
 
@@ -86,7 +89,9 @@ public class CarMovement : MonoBehaviour
     {
         if (collision.tag == "Car")
         {
+            HealthControl.health -= 1;
             Reset();
+            
         }
         else if (collision.tag == "Gsol")
         {
