@@ -113,11 +113,7 @@ public class CarMovement : MonoBehaviour
     void SetScoreText()
        
     {
-        ScoreText.text = "Score: " + count.ToString();
-        if (count == 1) {
-            CoinPlus.text = "+50";
-          
-        }
+        ScoreText.text = "Tokens: " + count.ToString();
     }
     private void Reset()
     {
