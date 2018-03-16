@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class HealthControl : MonoBehaviour {
-
+	
+	public GameObject healthCanvas;
     public GameObject Health1, Health2, Health3, Health4, Health5;
     public static int health;
 	void Start () {
