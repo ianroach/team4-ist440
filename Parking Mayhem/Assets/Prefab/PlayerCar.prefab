@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114338630812737796}
   m_Layer: 0
   m_Name: PlayerCar
-  m_TagString: Untagged
+  m_TagString: PlayerCarTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,9 +36,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1773440755835758}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.45, y: -83.01, z: 0}
-  m_LocalScale: {x: 0.12922037, y: 0.08882807, z: 0.19617552}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -42.525337, y: -81.2163, z: 0}
+  m_LocalScale: {x: 0.11457081, y: 0.089953706, z: 0.19617552}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -50,14 +50,14 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1773440755835758}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 30
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
@@ -72,10 +72,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5308876, y: 4.7780685}
+  m_Offset: {x: 0.872139, y: 0.8041992}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -86,7 +86,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 71.33163, y: 126.44386}
+  m_Size: {x: 54.2582, y: 110.54866}
   m_EdgeRadius: 0
 --- !u!114 &114338630812737796
 MonoBehaviour:
@@ -99,11 +99,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b942f8bec84da8d4789b98fed332bf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 3
-  maxspeed: 5
-  turnpower: 2
+  ExplosionAnimate: {fileID: 1615187465665952, guid: e301460ad0e42004b888ec7c7799779c,
+    type: 2}
+  power: 75
+  maxspeed: 100
+  turnpower: 1.5
   friction: 3
   curspeed: {x: 0, y: 0}
+  ScoreText: {fileID: 0}
+  CoinPlus: {fileID: 0}
+  StartPosition: {x: -0.1817322, y: 0, z: 0}
+  RotatePosition: {x: 0, y: 0, z: 0, w: 0}
 --- !u!212 &212791879177741252
 SpriteRenderer:
   m_ObjectHideFlags: 1

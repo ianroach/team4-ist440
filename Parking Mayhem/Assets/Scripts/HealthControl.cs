@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+
 public class HealthControl : MonoBehaviour {
-	
+    
 	public GameObject healthCanvas;
     public GameObject Health1, Health2, Health3, Health4, Health5;
     public static int health;
+
 	void Start () {
+       
         health = 5;
         Health1.gameObject.SetActive(true);
         Health2.gameObject.SetActive(true);
         Health3.gameObject.SetActive(true);
 		Health4.gameObject.SetActive(true);
 		Health5.gameObject.SetActive(true);
+       
     }
 	
 	// Update is called once per frame
 	void Update () {
+        
         if (health > 5)
             health = 5;
         switch (health)
@@ -64,7 +69,7 @@ public class HealthControl : MonoBehaviour {
                 Health3.gameObject.SetActive(false);
 				Health4.gameObject.SetActive(false);
 				Health5.gameObject.SetActive(false);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene(2);
                 break;
         }
 	}
