@@ -108,7 +108,7 @@ public class PlayerCarMovement : MonoBehaviour
         }
         else if (collision.tag == "Gsol")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Loads the next scene in next sequential order //
         }
         else if (collision.gameObject.tag == "PickUp")
         {
