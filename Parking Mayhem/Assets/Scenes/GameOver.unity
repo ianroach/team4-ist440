@@ -172,7 +172,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 1
+  m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 2029750621}
   - component: {fileID: 2029750620}
   m_Layer: 0
-  m_Name: GameOver (1)
+  m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
