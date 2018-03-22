@@ -5,40 +5,18 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour {
 	public Text Clock;
+	float gameTimer = 0f;
 
-	public float startTime;
-	public float ellapsedTime;
-	public bool startCounter;
+	void Update () {
+		gameTimer += Time.deltaTime;
 
-	public int minutes;
-	public int seconds;
-	// Use this for initialization
-	void Start () {
-		startCounter = false;
-		Clock = GetComponent<Text> ();
-	}
+		int seconds = (int)(gameTimer % 60);
+		int minutes = (int)(gameTimer / 60) % 60;
 
-	public void startTimeCounter()
-	{
-		startTime = Time.time;
-		startCounter = true;
-	}
+		string timerString = string.Format ("{0:00}:{1:00}", minutes, seconds);
 
-	public void stopTimeCounter()
-	{
-		startCounter = false;
-	}
+		Clock.text = timerString;
 
-	void Update ()
-	{
-		if(startCounter)
-		{
-			ellapsedTime = Time.time - startTime;
-
-			minutes = (int)ellapsedTime / 60;
-			seconds = (int)ellapsedTime % 60;
-
-			Clock.text = string.Format ("{0:00}:{1:00}", minutes, seconds);
-	}
-	}
+	
+}
 }

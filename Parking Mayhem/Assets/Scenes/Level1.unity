@@ -595,11 +595,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clock: {fileID: 124556728}
-  startTime: 0
-  ellapsedTime: 0
-  startCounter: 0
-  minutes: 0
-  seconds: 0
 --- !u!1 &41282323
 GameObject:
   m_ObjectHideFlags: 0
@@ -6460,8 +6455,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1311375424}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.0019297147, y: -0.7625316, z: 0.88818216}
-  m_LocalScale: {x: 1.0054814, y: 1.2567968, z: 1}
+  m_LocalPosition: {x: 0.0019297147, y: -0.7, z: 0.88818216}
+  m_LocalScale: {x: 1.0054814, y: 1.1273429, z: 1}
   m_Children: []
   m_Father: {fileID: 622858452}
   m_RootOrder: 3
