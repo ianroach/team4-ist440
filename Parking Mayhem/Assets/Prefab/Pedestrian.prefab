@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61155313216615058}
   - component: {fileID: 50844527619024528}
   - component: {fileID: 114499777464857154}
+  - component: {fileID: 114378832023813578}
   m_Layer: 0
   m_Name: Pedestrian
   m_TagString: Car
@@ -106,6 +107,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114378832023813578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1984697735718098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91eeca2ac88e60445a7e0598d0239138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114499777464857154
 MonoBehaviour:
   m_ObjectHideFlags: 1

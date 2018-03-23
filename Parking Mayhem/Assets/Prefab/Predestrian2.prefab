@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61670412087685272}
   - component: {fileID: 114097365056870756}
   - component: {fileID: 50486656089232052}
+  - component: {fileID: 114911472776615152}
   m_Layer: 0
   m_Name: Predestrian2
   m_TagString: Car
@@ -120,6 +121,17 @@ MonoBehaviour:
   rb: {fileID: 50486656089232052}
   minSpeed: 20
   maxSpeed: 20
+--- !u!114 &114911472776615152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779221265637114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91eeca2ac88e60445a7e0598d0239138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212479602472780540
 SpriteRenderer:
   m_ObjectHideFlags: 1

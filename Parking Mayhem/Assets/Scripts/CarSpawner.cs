@@ -16,6 +16,9 @@ public class CarSpawner : MonoBehaviour {
 		
 	}
 	
+	void OnBecameInvisible() {
+		Destroy(gameObject);
+	}
 
 	void Update () {
 		

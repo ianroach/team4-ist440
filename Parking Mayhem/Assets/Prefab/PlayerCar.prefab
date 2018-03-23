@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50275447748808222}
   - component: {fileID: 61554746357396814}
   - component: {fileID: 114338630812737796}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlayerCar
   m_TagString: PlayerCarTag
   m_Icon: {fileID: 0}
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1773440755835758}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.525337, y: -81.2163, z: 0}
-  m_LocalScale: {x: 0.11457081, y: 0.089953706, z: 0.19617552}
+  m_LocalPosition: {x: -0.1189, y: -0.662, z: 0}
+  m_LocalScale: {x: 0.00048961886, y: 0.0005184651, z: 0.19617552}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplosionAnimate: {fileID: 1615187465665952, guid: e301460ad0e42004b888ec7c7799779c,
     type: 2}
+  coinSoundEffect: {fileID: 0}
   power: 75
   maxspeed: 100
   turnpower: 1.5
