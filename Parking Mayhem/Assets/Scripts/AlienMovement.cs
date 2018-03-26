@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AlienMovement : MonoBehaviour {
 
+	public GameObject ExplosionAnimate;
 	public GameObject target;
 	public float moveSpeed;
 	public float rotationSpeed;
@@ -20,5 +21,21 @@ public class AlienMovement : MonoBehaviour {
 		float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
 		Quaternion qt = Quaternion.AngleAxis(angle, Vector3.forward);
 		transform.rotation = Quaternion.RotateTowards(transform.rotation, qt, Time.deltaTime * rotationSpeed);
+	}
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.tag == "Car")
+		{
+			Destroy(collision.gameObject);
+			playExplosion ();
+		
+		}
+
+	}
+
+	private void playExplosion ()
+	{
+		GameObject explosion = (GameObject)Instantiate(ExplosionAnimate);
+		explosion.transform.position = transform.position;
 	}
 }

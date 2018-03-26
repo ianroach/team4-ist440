@@ -93,11 +93,13 @@ public class PlayerCarMovement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Car")
+		if ((collision.tag == "Car")||(collision.tag == "Alien"))
         {
             if (HealthControl.health <= 5)
             {
-                Destroy(collision.gameObject);
+				if (collision.tag == "Car") {
+					Destroy (collision.gameObject);
+				}
                 playExplosion();
                 HealthControl.health -= 1;
                 Reset();
