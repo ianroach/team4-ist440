@@ -13,7 +13,7 @@ public class TimeManager : MonoBehaviour {
 		int seconds = (int)(gameTimer % 60);
 		int minutes = (int)(gameTimer / 60) % 60;
 
-		string timerString = string.Format ("{0:00}:{1:00}", minutes, seconds);
+		string timerString = "Time: " + string.Format ("{0:00}:{1:00}", minutes, seconds);
 
 		Clock.text = timerString;
 

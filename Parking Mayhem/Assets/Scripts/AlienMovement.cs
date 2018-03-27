@@ -26,13 +26,15 @@ public class AlienMovement : MonoBehaviour {
 		if (hittingSwitch)
 			stopMove = !stopMove;
 		if (stopMove) {
-			transform.position = new Vector3 (0f, 0f, 0f);
-		} else {
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, -moveSpeed * Time.deltaTime);
+           
+        } else {
 			transform.position = Vector3.MoveTowards (transform.position, target.transform.position, moveSpeed * Time.deltaTime);
 			Vector3 vectorToTarget = target.transform.position - transform.position;
-			float angle = Mathf.Atan2 (vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+			float angle = Mathf.Atan2 (vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - 90f;
 			Quaternion qt = Quaternion.AngleAxis (angle, Vector3.forward);
 			transform.rotation = Quaternion.RotateTowards (transform.rotation, qt, Time.deltaTime * rotationSpeed);
+          
 		}
 	}
 	private void OnTriggerEnter2D(Collider2D collision)

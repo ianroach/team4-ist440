@@ -118,7 +118,7 @@ public class PlayerCarMovement : MonoBehaviour
             Destroy(collision.gameObject);
             count += 50;
             StartCoroutine(ShowMessage("+50", 2));
-           SetScoreText();
+             SetScoreText();
 
 
 
