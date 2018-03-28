@@ -52,24 +52,24 @@ public class PlayerCarMovement : MonoBehaviour
             curspeed *= maxspeed;
         }
 
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            rigidbody2D.AddForce(transform.up * power);
-            rigidbody2D.drag = friction;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            rigidbody2D.AddForce(-(transform.up) * (power / 2));
-            rigidbody2D.drag = friction;
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Rotate(Vector3.forward * turnpower);
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Rotate(Vector3.forward * -turnpower);
-        }
+		if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.UpArrow))
+		{
+			rigidbody2D.AddForce(transform.up * power);
+			rigidbody2D.drag = friction;
+		}
+		if (Input.GetKey(KeyCode.JoystickButton1) || Input.GetKey(KeyCode.DownArrow))
+		{
+			rigidbody2D.AddForce(-(transform.up) * (power / 2));
+			rigidbody2D.drag = friction;
+		}
+		if (Input.GetAxis("Horizontal") == -1 || Input.GetKey(KeyCode.LeftArrow))
+		{
+			transform.Rotate(Vector3.forward * turnpower);
+		}
+		if (Input.GetAxis("Horizontal") == 1 || Input.GetKey(KeyCode.RightArrow))
+		{
+			transform.Rotate(Vector3.forward * -turnpower);
+		}
 
         noGas();
 
