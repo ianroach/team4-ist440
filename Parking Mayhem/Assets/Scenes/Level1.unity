@@ -763,7 +763,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.062723696, y: 0.19332027}
+  m_Offset: {x: -0.062723696, y: 0.27545777}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -774,7 +774,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.125447, y: 0.7476518}
+  m_Size: {x: 1.125447, y: 0.9119268}
   m_EdgeRadius: 0
 --- !u!4 &73253061
 Transform:
@@ -1415,7 +1415,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -13.292419, y: -20.454712}
+  m_Offset: {x: -13.292419, y: 0.35050964}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1426,7 +1426,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 58.39099, y: 106.376465}
+  m_Size: {x: 58.39099, y: 147.98691}
   m_EdgeRadius: 0
 --- !u!1 &268131974
 GameObject:
@@ -5734,7 +5734,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8bae173a92cf0dd469c783b88465a24b, type: 3}
-    m_FontSize: 12
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -6759,7 +6759,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 91140e1f0693093468f55462d4342255, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.482
+  m_Volume: 0.355
   m_Pitch: 1.04
   Loop: 1
   Mute: 0
@@ -9118,7 +9118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -287.2, y: -261}
+  m_AnchoredPosition: {x: -288.7, y: -240.4}
   m_SizeDelta: {x: 196.99, y: 50.18}
   m_Pivot: {x: 0.5000002, y: 0.6793412}
 --- !u!114 &1677568119
@@ -9156,7 +9156,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8bae173a92cf0dd469c783b88465a24b, type: 3}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -11443,11 +11443,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4934997234495784, guid: 002f8be54fa843643bde06da1bd5cc00, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1125
+      value: 468
       objectReference: {fileID: 0}
     - target: {fileID: 4934997234495784, guid: 002f8be54fa843643bde06da1bd5cc00, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 617.8
+      value: 645
       objectReference: {fileID: 0}
     - target: {fileID: 4934997234495784, guid: 002f8be54fa843643bde06da1bd5cc00, type: 2}
       propertyPath: m_LocalPosition.z
