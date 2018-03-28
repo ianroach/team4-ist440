@@ -10,6 +10,7 @@ TagManager:
   - PlayerCarTag
   - Alien
   - Switch
+  - Ped
   layers:
   - Default
   - TransparentFX

@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114378832023813578}
   m_Layer: 0
   m_Name: Pedestrian
-  m_TagString: Car
+  m_TagString: Ped
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

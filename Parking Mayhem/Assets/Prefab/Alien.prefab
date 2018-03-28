@@ -96,11 +96,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41130f7a600f73541b63e234814e0a9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SplatAnimate: {fileID: 1167049190780500, guid: 3269b605f884d814da43b09736689c48,
+    type: 2}
   ExplosionAnimate: {fileID: 1615187465665952, guid: e301460ad0e42004b888ec7c7799779c,
     type: 2}
   target: {fileID: 0}
-  moveSpeed: 20
+  moveSpeed: 15
   rotationSpeed: 1
+  SwitchCheck: {fileID: 0}
+  SwithRadius: 0
+  WhatIsSwitch:
+    serializedVersion: 2
+    m_Bits: 0
+  stopMove: 0
 --- !u!212 &212554172267596690
 SpriteRenderer:
   m_ObjectHideFlags: 1

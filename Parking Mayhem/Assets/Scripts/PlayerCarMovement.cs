@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerCarMovement : MonoBehaviour
 {
+    public GameObject SplatAnimate;
     public GameObject ExplosionAnimate;
     public AudioSource coinSoundEffect;
 
@@ -93,21 +94,32 @@ public class PlayerCarMovement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-		if ((collision.tag == "Car")||(collision.tag == "Alien"))
+        if ((collision.tag == "Car") || (collision.tag == "Alien"))
         {
             if (HealthControl.health <= 5)
             {
-				if (collision.tag == "Car") {
-					Destroy (collision.gameObject);
-				}
+                if (collision.tag == "Car")
+                {
+                    Destroy(collision.gameObject);
+                }
                 playExplosion();
                 HealthControl.health -= 1;
                 Reset();
 
             }
-
-
         }
+        if (collision.tag == "Ped")
+            {
+            if (HealthControl.health <= 5)
+            {
+                Destroy(collision.gameObject);
+                playSplat();
+                HealthControl.health -= 2;
+                Reset();
+            }
+            }
+
+        
         else if (collision.tag == "Gsol")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Loads the next scene in next sequential order //
@@ -153,5 +165,11 @@ public class PlayerCarMovement : MonoBehaviour
     {
         GameObject explosion = (GameObject)Instantiate(ExplosionAnimate);
         explosion.transform.position = transform.position;
+    }
+    private void playSplat ()
+        
+    {
+        GameObject splat = (GameObject)Instantiate(SplatAnimate);
+        splat.transform.position = transform.position;
     }
 }

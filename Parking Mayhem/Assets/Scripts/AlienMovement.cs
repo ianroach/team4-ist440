@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AlienMovement : MonoBehaviour {
 
+    public GameObject SplatAnimate;
 	public GameObject ExplosionAnimate;
 	public GameObject target;
 	public float moveSpeed;
@@ -45,7 +46,11 @@ public class AlienMovement : MonoBehaviour {
 			playExplosion ();
 		
 		}
-
+        else if (collision.tag == "Ped")
+        {
+            Destroy(collision.gameObject);
+            playSplat();
+        }
 	}
 
 	private void playExplosion ()
@@ -53,4 +58,10 @@ public class AlienMovement : MonoBehaviour {
 		GameObject explosion = (GameObject)Instantiate(ExplosionAnimate);
 		explosion.transform.position = transform.position;
 	}
+    private void playSplat()
+
+    {
+        GameObject splat = (GameObject)Instantiate(SplatAnimate);
+        splat.transform.position = transform.position;
+    }
 }
