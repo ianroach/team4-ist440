@@ -7,10 +7,11 @@ using UnityEngine.UI;
 
 public class PlayerCarMovement : MonoBehaviour
 {
+    
     public GameObject SplatAnimate;
     public GameObject ExplosionAnimate;
     public AudioSource coinSoundEffect;
-
+    public AudioSource ManScreamSound;
     public float power = 3;
     public float maxspeed = 5;
     public float turnpower = 2;
@@ -31,6 +32,8 @@ public class PlayerCarMovement : MonoBehaviour
     void Start()
     {
         GetComponent<AudioSource>();
+        GetComponent<AudioSource>();
+     
         rigidbody2D = GetComponent<Rigidbody2D>();
         StartPosition = transform.position;
         RotatePosition = transform.rotation;
@@ -56,6 +59,7 @@ public class PlayerCarMovement : MonoBehaviour
 		{
 			rigidbody2D.AddForce(transform.up * power);
 			rigidbody2D.drag = friction;
+           
 		}
 		if (Input.GetKey(KeyCode.JoystickButton1) || Input.GetKey(KeyCode.DownArrow))
 		{
@@ -108,17 +112,18 @@ public class PlayerCarMovement : MonoBehaviour
 
             }
         }
-        if (collision.tag == "Ped")
-            {
+      else  if (collision.tag == "Ped")
+        {
             if (HealthControl.health <= 5)
             {
+                ManScreamSound.Play();
                 Destroy(collision.gameObject);
                 playSplat();
                 HealthControl.health -= 2;
                 Reset();
             }
-            }
-
+        }
+    
         
         else if (collision.tag == "Gsol")
         {
