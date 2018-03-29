@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d1776b2f1c0154a8ad9f2fd6038224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventSystem: {fileID: 0}
+  eventSystem: {fileID: 1508809800}
   selectedObject: {fileID: 1678455643}
 --- !u!114 &293393806
 MonoBehaviour:
