@@ -11,7 +11,9 @@ public class PlayerCarMovement : MonoBehaviour
     public GameObject SplatAnimate;
     public GameObject ExplosionAnimate;
     public AudioSource coinSoundEffect;
-    public AudioSource ManScreamSound;
+	public AudioSource ManScreamSound;
+	public AudioSource CarNoise;
+
     public float power = 3;
     public float maxspeed = 5;
     public float turnpower = 2;
@@ -31,8 +33,7 @@ public class PlayerCarMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        GetComponent<AudioSource>();
-        GetComponent<AudioSource>();
+     
      
         rigidbody2D = GetComponent<Rigidbody2D>();
         StartPosition = transform.position;
@@ -57,14 +58,17 @@ public class PlayerCarMovement : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.UpArrow))
 		{
+			CarNoise.Play ();
 			rigidbody2D.AddForce(transform.up * power);
 			rigidbody2D.drag = friction;
+
            
 		}
 		if (Input.GetKey(KeyCode.JoystickButton1) || Input.GetKey(KeyCode.DownArrow))
 		{
 			rigidbody2D.AddForce(-(transform.up) * (power / 2));
 			rigidbody2D.drag = friction;
+
 		}
 		if (Input.GetAxis("Horizontal") == -1 || Input.GetKey(KeyCode.LeftArrow))
 		{

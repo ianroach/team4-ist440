@@ -4,13 +4,16 @@ sceneSetups:
   isActive: 0
 - path: Assets/Scenes/LoadingScene.unity
   isLoaded: 1
-  isActive: 1
-- path: Assets/Scenes/Level1.unity
+  isActive: 0
+- path: Assets/Scenes/Scene1.unity
   isLoaded: 1
   isActive: 0
 - path: Assets/Scenes/Level2.unity
   isLoaded: 1
   isActive: 0
+- path: Assets/Scenes/Level3.unity
+  isLoaded: 1
+  isActive: 1
 - path: Assets/Scenes/Space_Level.unity
   isLoaded: 1
   isActive: 0

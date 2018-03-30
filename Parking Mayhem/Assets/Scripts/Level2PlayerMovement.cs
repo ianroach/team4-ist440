@@ -14,6 +14,7 @@ public class Level2PlayerMovement : MonoBehaviour
 
     public AudioSource coinSoundEffect;
     public AudioSource ManScreamingEffect;
+	public AudioSource CarNoise;
 
     public float power = 3;
     public float maxspeed = 5;
@@ -35,6 +36,7 @@ public class Level2PlayerMovement : MonoBehaviour
     void Start()
     {
         GetComponent<AudioSource>();
+		CarNoise.Stop ();
         rigidbody2D = GetComponent<Rigidbody2D>();
         StartPosition = transform.position;
         RotatePosition = transform.rotation;
@@ -48,6 +50,7 @@ public class Level2PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+
         curspeed = new Vector2(rigidbody2D.velocity.x, rigidbody2D.velocity.y);
 
         if (curspeed.magnitude > maxspeed)
@@ -55,16 +58,28 @@ public class Level2PlayerMovement : MonoBehaviour
             curspeed = curspeed.normalized;
             curspeed *= maxspeed;
         }
+		{
 
-        if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.UpArrow))
-        {
-            rigidbody2D.AddForce(transform.up * power);
-            rigidbody2D.drag = friction;
-        }
+			if (Input.GetKey (KeyCode.JoystickButton0) || Input.GetKey (KeyCode.UpArrow)) {
+				CarNoise.Play ();
+			
+				rigidbody2D.AddForce (transform.up * power);
+				rigidbody2D.drag = friction;
+
+
+			}
+			else if (!Input.GetKey (KeyCode.JoystickButton0) || Input.GetKey (KeyCode.UpArrow)) 
+			{
+				
+			}
+		}
+		
         if (Input.GetKey(KeyCode.JoystickButton1) || Input.GetKey(KeyCode.DownArrow))
         {
+			
             rigidbody2D.AddForce(-(transform.up) * (power / 2));
             rigidbody2D.drag = friction;
+
         }
         if (Input.GetAxis("Horizontal") == -1 || Input.GetKey(KeyCode.LeftArrow))
         {

@@ -22,7 +22,7 @@ public class AlienMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
       
-    AlienSoundEffect.Play();
+		AlienSoundEffect.Play();
 	}
 
 	// Update is called once per frame
