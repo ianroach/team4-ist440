@@ -69,7 +69,7 @@ public class HealthControl : MonoBehaviour {
                 Health3.gameObject.SetActive(false);
 				Health4.gameObject.SetActive(false);
 				Health5.gameObject.SetActive(false);
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene("GameOver");
                 break;
         }
 	}

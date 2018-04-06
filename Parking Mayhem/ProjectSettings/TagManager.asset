@@ -12,6 +12,7 @@ TagManager:
   - Switch
   - Ped
   - MonsterTruck
+  - ScoreManager
   layers:
   - Default
   - TransparentFX

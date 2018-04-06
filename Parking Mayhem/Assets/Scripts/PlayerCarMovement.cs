@@ -19,7 +19,7 @@ public class PlayerCarMovement : MonoBehaviour
     public float turnpower = 2;
     public float friction = 3;
     public Vector2 curspeed;
-    public Text ScoreText;
+    
     public Text CoinPlus;
     public Vector3 StartPosition;
     public Quaternion RotatePosition;
@@ -27,7 +27,7 @@ public class PlayerCarMovement : MonoBehaviour
     
 
     new Rigidbody2D rigidbody2D;
-    private int count;
+    private ScoreManager scores;
     
 
     // Use this for initialization
@@ -38,10 +38,9 @@ public class PlayerCarMovement : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         StartPosition = transform.position;
         RotatePosition = transform.rotation;
-        count = 0;
-        CoinPlus.text = "";
-        SetScoreText();
         
+        CoinPlus.text = "";
+        scores = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
 
     }
 
@@ -102,7 +101,7 @@ public class PlayerCarMovement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.tag == "Car") || (collision.tag == "Alien"))
+        if ((collision.tag == "Car") || (collision.tag == "Alien") || (collision.tag == "MonsterTruck"))
         {
             if (HealthControl.health <= 5)
             {
@@ -131,15 +130,19 @@ public class PlayerCarMovement : MonoBehaviour
         
         else if (collision.tag == "Gsol")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Loads the next scene in next sequential order //
+            scores.count += 100;
+         
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Loads the next scene in next sequential order //  
+
+            StartCoroutine(ShowMessage("+100", 1));
         }
         else if (collision.gameObject.tag == "PickUp")
         {
             coinSoundEffect.Play();
             Destroy(collision.gameObject);
-            count += 50;
+            scores.count += 50;
             StartCoroutine(ShowMessage("+50", 2));
-             SetScoreText();
+           
 
 
 
@@ -157,11 +160,7 @@ public class PlayerCarMovement : MonoBehaviour
             CoinPlus.enabled = false;
         }
     
-    void SetScoreText()
-       
-    {
-        ScoreText.text = "Coins: " + count.ToString();
-    }
+  
     
 
     private void Reset()
