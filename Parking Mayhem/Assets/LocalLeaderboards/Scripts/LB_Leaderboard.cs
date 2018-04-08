@@ -15,7 +15,7 @@ public class LB_Leaderboard : MonoBehaviour
     public int numberOfScores = 10; // <-- default value for leaderboard sizes
 
     [Space(10)]
-    public string defaultName = "PsychicParrot";
+    public string defaultName = "Lil Pump";
     public float defaultScore = 0;
 
     [Space(10)]

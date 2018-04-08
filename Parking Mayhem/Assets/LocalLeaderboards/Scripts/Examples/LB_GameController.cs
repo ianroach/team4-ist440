@@ -4,12 +4,15 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class LB_GameController : MonoBehaviour {
-
+	private ScoreManager scores;
     public Text scoreUIText;
 
 	void Start () {
         // set the score text to a random number at the start of the scene
-        scoreUIText.text = Random.Range(0, 10000).ToString();
+		scores = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
+
+		scoreUIText.text = "" + scores.count.ToString();
+
 	}
 
     public void GameOver()
@@ -21,7 +24,7 @@ public class LB_GameController : MonoBehaviour {
         // when the game has finished, we just need to store the
         // final score in a PlayerPref so that the leaderboard script
         // can pick it up later
-        PlayerPrefs.SetInt("finalScore", finalScore);
+        PlayerPrefs.SetInt("finalScore", scores.count);
 
         // load the leaderboard screen to submit the score
         SceneManager.LoadScene("ShowLeaderboard");

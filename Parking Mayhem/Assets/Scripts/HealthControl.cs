@@ -10,7 +10,6 @@ public class HealthControl : MonoBehaviour {
 	public GameObject Health1, Health2, Health3, Health4, Health5;
 	public static int health;
 	public string mainMenu;
-	public GameObject GameOverCanvas;
 
 
 
@@ -24,7 +23,7 @@ public class HealthControl : MonoBehaviour {
 		Health3.gameObject.SetActive(true);
 		Health4.gameObject.SetActive(true);
 		Health5.gameObject.SetActive(true);
-		Time.timeScale = 1f;
+	
 	}
 
 	// Update is called once per frame
@@ -41,8 +40,7 @@ public class HealthControl : MonoBehaviour {
 			Health3.gameObject.SetActive (true);
 			Health4.gameObject.SetActive (true);
 			Health5.gameObject.SetActive (true);
-			GameOverCanvas.SetActive (false);
-			Time.timeScale = 1f;
+
 
 			break;
 		case 4:
@@ -51,8 +49,7 @@ public class HealthControl : MonoBehaviour {
 			Health3.gameObject.SetActive (true);
 			Health4.gameObject.SetActive (true);
 			Health5.gameObject.SetActive (false);
-			GameOverCanvas.SetActive (false);
-			Time.timeScale = 1f;
+		
 			break;
 
 		case 3:
@@ -62,8 +59,6 @@ public class HealthControl : MonoBehaviour {
 			Health4.gameObject.SetActive(false);
 			Health5.gameObject.SetActive(false);
 
-			GameOverCanvas.SetActive (false);
-			Time.timeScale = 1f;
 
 			break;
 		case 2:
@@ -72,9 +67,6 @@ public class HealthControl : MonoBehaviour {
 			Health3.gameObject.SetActive (false);
 			Health4.gameObject.SetActive (false);
 			Health5.gameObject.SetActive (false);
-
-			GameOverCanvas.SetActive (false);
-			Time.timeScale = 1f;
 			break;
 
 		case 1:
@@ -83,8 +75,7 @@ public class HealthControl : MonoBehaviour {
 			Health3.gameObject.SetActive (false);
 			Health4.gameObject.SetActive (false);
 			Health5.gameObject.SetActive (false);
-			GameOverCanvas.SetActive (false);
-			Time.timeScale = 1f;
+
 			break;
 
 		case 0:
@@ -94,8 +85,7 @@ public class HealthControl : MonoBehaviour {
 			Health3.gameObject.SetActive (false);
 			Health4.gameObject.SetActive (false);
 			Health5.gameObject.SetActive (false);
-			GameOverCanvas.SetActive (true);
-			Time.timeScale = 0f;
+			SceneManager.LoadScene ("Game");
 			break;
 		
 

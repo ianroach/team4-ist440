@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LoadLeaderBoard : MonoBehaviour {
 
-
-
-    public void leaderBoard()
-    {
-        SceneManager.LoadScene("ShowLeaderBoard");
-    }
-
+	public void LeaderBoard()
+	{
+		SceneManager.LoadScene ("ShowLeaderboard");
+	}
 }

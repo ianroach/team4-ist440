@@ -547,8 +547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 0
+  finalScore: 0
   ScoreText: {fileID: 114633241073891716}
-  hiScoreText: {fileID: 0}
 --- !u!114 &114358642033896478
 MonoBehaviour:
   m_ObjectHideFlags: 1
