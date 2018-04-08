@@ -59,13 +59,13 @@ public class LB_StandardHighScores : MonoBehaviour
 	public void GotoMainMenu ()
 	{
 		// load the main menu
-		SceneManager.LoadScene ("MainMenu");
+		SceneManager.LoadScene ("Parking_Mayhem_Menu");
 	}
 
 	public void PlayAgain ()
 	{
 		// load the game scene
-		SceneManager.LoadScene ("Game");
+		SceneManager.LoadScene ("Level1");
 	}
 
 	// ---------------------------------------------------------------------

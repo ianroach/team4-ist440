@@ -5,18 +5,17 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour {
 
 	public int count;
-
+    public int finalScore;
 
 	public Text ScoreText;
 	public Text hiScoreText;
-
 
 	void Start()
 	{
 
 		hiScoreText.text = PlayerPrefs.GetInt ("", 0).ToString();
-
-	}
+       
+    }
 	// Update is called once per frame
 	void Update () {
 
@@ -25,7 +24,7 @@ public class ScoreManager : MonoBehaviour {
 		{
 			PlayerPrefs.SetInt ("", count);
 			hiScoreText.text = count.ToString ();
-
-		}
+            PlayerPrefs.SetInt("finalScore", finalScore);
+        }
 	}
 }

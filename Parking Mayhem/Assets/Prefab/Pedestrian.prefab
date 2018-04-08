@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 61155313216615058}
   - component: {fileID: 50844527619024528}
   - component: {fileID: 114553277185816890}
+  - component: {fileID: 114063765371655214}
   m_Layer: 0
   m_Name: Pedestrian
   m_TagString: Ped
@@ -135,7 +136,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114553277185816890
+--- !u!114 &114063765371655214
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -143,12 +144,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1984697735718098}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e762f8c0ddb2e4ba0ceda60321053b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 50844527619024528}
+  minSpeed: 20
+  maxSpeed: 20
+--- !u!114 &114553277185816890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1984697735718098}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5bf3aa1926cad5d418ddee7c84f71667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
   moveRight: 0
-  SwitchCheck: {fileID: 4783263948813164}
+  SwitchCheck: {fileID: 0}
   SwithRadius: 0.1
   WhatIsSwitch:
     serializedVersion: 2

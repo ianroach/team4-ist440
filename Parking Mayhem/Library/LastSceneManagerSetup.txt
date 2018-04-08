@@ -3,7 +3,7 @@ sceneSetups:
   isLoaded: 1
   isActive: 1
 - path: Assets/Scenes/Level1.unity
-  isLoaded: 1
+  isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/Level2.unity
   isLoaded: 0
@@ -20,6 +20,6 @@ sceneSetups:
 - path: Assets/Scenes/Space_Level.unity
   isLoaded: 0
   isActive: 0
-- path: Assets/Scenes/GameOver.unity
-  isLoaded: 1
+- path: Assets/LocalLeaderboards/ExampleScenes/ShowLeaderboard.unity
+  isLoaded: 0
   isActive: 0

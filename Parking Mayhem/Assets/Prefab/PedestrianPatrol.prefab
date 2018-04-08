@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 15
   moveRight: 0
-  SwitchCheck: {fileID: 4712594734257508}
+  SwitchCheck: {fileID: 0}
   SwithRadius: 0.1
   WhatIsSwitch:
     serializedVersion: 2

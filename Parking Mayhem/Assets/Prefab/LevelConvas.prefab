@@ -422,7 +422,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1534014800598702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -448,7 +448,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: +100
+  m_Text: +50
 --- !u!114 &114105173513854954
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -548,6 +548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: 0
   ScoreText: {fileID: 114633241073891716}
+  hiScoreText: {fileID: 0}
 --- !u!114 &114358642033896478
 MonoBehaviour:
   m_ObjectHideFlags: 1
