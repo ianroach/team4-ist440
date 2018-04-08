@@ -23,6 +23,3 @@ sceneSetups:
 - path: Assets/LocalLeaderboards/ExampleScenes/ShowLeaderboard.unity
   isLoaded: 0
   isActive: 0
-- path: Assets/LocalLeaderboards/ExampleScenes/Game.unity
-  isLoaded: 0
-  isActive: 0
