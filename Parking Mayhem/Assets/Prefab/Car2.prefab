@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50004095691222782}
   - component: {fileID: 61774118260432182}
   - component: {fileID: 114237687153088522}
+  - component: {fileID: 114564211120029740}
   m_Layer: 0
   m_Name: Car2
   m_TagString: Car
@@ -128,6 +129,17 @@ MonoBehaviour:
   rb: {fileID: 50004095691222782}
   minSpeed: 40
   maxSpeed: 50
+--- !u!114 &114564211120029740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062545203113106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91eeca2ac88e60445a7e0598d0239138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212310446430680120
 SpriteRenderer:
   m_ObjectHideFlags: 1
