@@ -54,7 +54,7 @@ public class SpaceShipMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.tag == "SpaceShip"))
+        if ((collision.tag == "Meteor"))
         {
             if (HealthControl.health <= 5)
             {
