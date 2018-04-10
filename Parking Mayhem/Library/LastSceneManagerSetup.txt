@@ -1,7 +1,7 @@
 sceneSetups:
 - path: Assets/Scenes/Parking_Mayhem_Menu.unity
-  isLoaded: 1
-  isActive: 1
+  isLoaded: 0
+  isActive: 0
 - path: Assets/Scenes/Level1.unity
   isLoaded: 0
   isActive: 0
@@ -26,3 +26,6 @@ sceneSetups:
 - path: Assets/LocalLeaderboards/ExampleScenes/Game.unity
   isLoaded: 0
   isActive: 0
+- path: Assets/Scenes/Darklevel.unity
+  isLoaded: 1
+  isActive: 1
