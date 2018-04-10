@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 50925157683634574}
-  minSpeed: 40
+  minSpeed: 50
   maxSpeed: 50
 --- !u!114 &114512546332235096
 MonoBehaviour:

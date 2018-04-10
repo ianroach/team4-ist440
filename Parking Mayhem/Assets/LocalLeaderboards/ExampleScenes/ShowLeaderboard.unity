@@ -741,7 +741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useJoystickEnterNameBox: 1
   useFloatScoresInsteadofInts: 0
-  emptyName: Lil Pump
+  emptyName: ALPHA
   _scoreManager: {fileID: 408487739}
   leaderboardUIText_rank: {fileID: 1440208247}
   leaderboardUIText_name: {fileID: 211321454}
@@ -4883,7 +4883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &783736065
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6510,7 +6510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1991513104
 RectTransform:
   m_ObjectHideFlags: 0
