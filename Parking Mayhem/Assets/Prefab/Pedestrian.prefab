@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 95910230367162612}
   - component: {fileID: 61155313216615058}
   - component: {fileID: 50844527619024528}
+  - component: {fileID: 114553277185816890}
   - component: {fileID: 114063765371655214}
   m_Layer: 0
   m_Name: Pedestrian
@@ -66,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1984697735718098}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1219.8, y: 920, z: -10.5}
-  m_LocalScale: {x: 0.28, y: 0.28, z: 1}
+  m_LocalPosition: {x: -32.6, y: 43.2, z: -10.5}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 1}
   m_Children:
   - {fileID: 4783263948813164}
   m_Father: {fileID: 0}
@@ -149,6 +150,24 @@ MonoBehaviour:
   rb: {fileID: 50844527619024528}
   minSpeed: 20
   maxSpeed: 20
+--- !u!114 &114553277185816890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1984697735718098}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf3aa1926cad5d418ddee7c84f71667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 15
+  moveRight: 0
+  SwitchCheck: {fileID: 0}
+  SwithRadius: 0.1
+  WhatIsSwitch:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &212060268111316472
 SpriteRenderer:
   m_ObjectHideFlags: 1

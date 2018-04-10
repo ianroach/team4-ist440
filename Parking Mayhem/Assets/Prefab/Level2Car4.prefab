@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 50511440056394572}
-  minSpeed: 50
+  minSpeed: 40
   maxSpeed: 50
 --- !u!212 &212195114020721372
 SpriteRenderer:
