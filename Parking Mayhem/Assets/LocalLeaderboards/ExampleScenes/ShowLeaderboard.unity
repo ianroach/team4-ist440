@@ -633,6 +633,7 @@ GameObject:
   - component: {fileID: 223447512}
   - component: {fileID: 223447514}
   - component: {fileID: 223447513}
+  - component: {fileID: 223447515}
   m_Layer: 5
   m_Name: MainPanel
   m_TagString: Untagged
@@ -696,6 +697,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 223447511}
+--- !u!114 &223447515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223447511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d1776b2f1c0154a8ad9f2fd6038224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 1806799179}
+  selectedObject: {fileID: 1405068146}
 --- !u!1 &408487736
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +720,7 @@ GameObject:
   - component: {fileID: 408487738}
   - component: {fileID: 408487739}
   - component: {fileID: 408487737}
+  - component: {fileID: 408487740}
   m_Layer: 5
   m_Name: Leaderboard_Controller
   m_TagString: Untagged
@@ -724,8 +739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d444eb24001c2aa47842fd72804590b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useJoystickEnterNameBox: 0
-  useFloatScoresInsteadofInts: 1
+  useJoystickEnterNameBox: 1
+  useFloatScoresInsteadofInts: 0
   emptyName: Lil Pump
   _scoreManager: {fileID: 408487739}
   leaderboardUIText_rank: {fileID: 1440208247}
@@ -748,11 +763,11 @@ RectTransform:
   m_LocalScale: {x: 0.99375, y: 0.99375, z: 0.99375}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400.00003, y: 315.6604}
+  m_AnchoredPosition: {x: -69, y: 20}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &408487739
@@ -772,6 +787,19 @@ MonoBehaviour:
   defaultName: Lil Pump
   defaultScore: 0
   lowestFirst: 0
+--- !u!114 &408487740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 408487736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2725e80abac79bf4c91f782214779a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectNamesToDestroy:
+  - LevelConvas
 --- !u!1 &464463655
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +857,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0, g: 1, b: 0.13103437, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1112,7 +1140,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1530256004
+  randomSeed: -996412250
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5402,7 +5430,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0, g: 1, b: 0.006896496, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -6056,12 +6084,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1806799177}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2037, y: 210, z: -2700}
+  m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1909964994}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1829690719
 GameObject:
@@ -6295,6 +6323,7 @@ RectTransform:
   - {fileID: 223447512}
   - {fileID: 1991513104}
   - {fileID: 783736065}
+  - {fileID: 1806799180}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

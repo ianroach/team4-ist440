@@ -10,6 +10,7 @@ public class PlayerCarMovement : MonoBehaviour
     
     public GameObject SplatAnimate;
     public GameObject ExplosionAnimate;
+    public GameObject CatExplosionAnimate;
     public AudioSource coinSoundEffect;
 	public AudioSource ManScreamSound;
 	public AudioSource CarNoise;
@@ -122,7 +123,16 @@ public class PlayerCarMovement : MonoBehaviour
                 ManScreamSound.Play();
                 Destroy(collision.gameObject);
                 playSplat();
-                HealthControl.health -= 2;
+                HealthControl.health -= 1;
+                Reset();
+            }
+        }
+        else if (collision.tag == "Cat")
+        {
+            if (HealthControl.health <= 5)
+            {
+                catPlayExplosion();
+                HealthControl.health -= 1;
                 Reset();
             }
         }
@@ -173,6 +183,11 @@ public class PlayerCarMovement : MonoBehaviour
     {
         GameObject explosion = (GameObject)Instantiate(ExplosionAnimate);
         explosion.transform.position = transform.position;
+    }
+    private void catPlayExplosion()
+    {
+        GameObject Catexplosion = (GameObject)Instantiate(CatExplosionAnimate);
+        Catexplosion.transform.position = transform.position;
     }
     private void playSplat ()
         

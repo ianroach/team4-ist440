@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 897799778}
   m_Layer: 2
   m_Name: n8 (2)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -939,10 +939,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -7.8379116}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -953,7 +953,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 100, y: 136}
+  m_Size: {x: 100, y: 120.32417}
   m_EdgeRadius: 0
 --- !u!50 &897799779
 Rigidbody2D:
@@ -984,10 +984,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 8.26548, y: -6.718155}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -998,7 +998,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 100, y: 136}
+  m_Size: {x: 83.46904, y: 122.56369}
   m_EdgeRadius: 0
 --- !u!212 &897799781
 SpriteRenderer:
@@ -1746,10 +1746,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -5.8030777}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1760,7 +1760,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 100, y: 136}
+  m_Size: {x: 100, y: 124.393845}
   m_EdgeRadius: 0
 --- !u!50 &1307246161
 Rigidbody2D:
@@ -1794,7 +1794,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -4.6425}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1805,7 +1805,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 100, y: 136}
+  m_Size: {x: 100, y: 126.715}
   m_EdgeRadius: 0
 --- !u!212 &1307246163
 SpriteRenderer:
@@ -2461,7 +2461,7 @@ GameObject:
   - component: {fileID: 1496176893}
   m_Layer: 2
   m_Name: n3 (2)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2473,8 +2473,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1496176891}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -33.178, y: 23.966303, z: -10.5}
-  m_LocalScale: {x: 0.081663355, y: 0.07534835, z: 1}
+  m_LocalPosition: {x: -33.04, y: 23.966303, z: -10.5}
+  m_LocalScale: {x: 0.081663355, y: 0.07738442, z: 1}
   m_Children: []
   m_Father: {fileID: 2022577499}
   m_RootOrder: 8
@@ -2488,10 +2488,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 5.965309}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2502,7 +2502,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 100, y: 136}
+  m_Size: {x: 100, y: 124.06938}
   m_EdgeRadius: 0
 --- !u!50 &1496176894
 Rigidbody2D:
@@ -2536,7 +2536,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 11.425356}
+  m_Offset: {x: 0, y: 28.726133}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2547,7 +2547,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 100, y: 113.14929}
+  m_Size: {x: 100, y: 78.54774}
   m_EdgeRadius: 0
 --- !u!212 &1496176896
 SpriteRenderer:
@@ -2634,10 +2634,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 2.9616947}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2648,7 +2648,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 100, y: 136}
+  m_Size: {x: 100, y: 130.07661}
   m_EdgeRadius: 0
 --- !u!50 &1524998389
 Rigidbody2D:
@@ -2679,7 +2679,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.3900757, y: 7.259224}
@@ -2912,6 +2912,12 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 212901873574878408, guid: 1395b399bf3b91c43a20bd5c1b98dd38,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3dfe5180f58c1f24b90752aa69cfbeb0,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 114564131759396038, guid: 1395b399bf3b91c43a20bd5c1b98dd38, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1395b399bf3b91c43a20bd5c1b98dd38, type: 2}
@@ -3020,7 +3026,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.003980018, y: 0.08375138}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3031,7 +3037,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.73, y: 0.71}
+  m_Size: {x: 0.40366393, y: 0.54249716}
   m_EdgeRadius: 0
 --- !u!1 &1617081149
 GameObject:
@@ -3470,6 +3476,7 @@ MonoBehaviour:
     type: 2}
   ExplosionAnimate: {fileID: 1615187465665952, guid: e301460ad0e42004b888ec7c7799779c,
     type: 2}
+  CatExplosionAnimate: {fileID: 0}
   coinSoundEffect: {fileID: 902050763}
   ManScreamSound: {fileID: 1317634639}
   CarNoise: {fileID: 1354891602}
