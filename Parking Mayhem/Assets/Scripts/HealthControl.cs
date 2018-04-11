@@ -85,7 +85,7 @@ public class HealthControl : MonoBehaviour {
 			Health3.gameObject.SetActive (false);
 			Health4.gameObject.SetActive (false);
 			Health5.gameObject.SetActive (false);
-			SceneManager.LoadScene ("Game");
+			SceneManager.LoadScene (5);
 			break;
 		
 
