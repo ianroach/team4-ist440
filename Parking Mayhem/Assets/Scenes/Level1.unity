@@ -1228,6 +1228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 130332155}
   - component: {fileID: 130332156}
+  - component: {fileID: 130332157}
   m_Layer: 0
   m_Name: HealthControl
   m_TagString: Untagged
@@ -1271,6 +1272,18 @@ MonoBehaviour:
   Health4: {fileID: 1726880100}
   Health5: {fileID: 1354819684}
   mainMenu: Parking_Mayhem_Menu
+--- !u!114 &130332157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 130332154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b733d57500da7942b11c2c752785afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instance: {fileID: 0}
 --- !u!1 &133575157
 GameObject:
   m_ObjectHideFlags: 0
