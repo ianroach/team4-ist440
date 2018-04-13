@@ -17,6 +17,7 @@ public class CarSpawner : MonoBehaviour {
 	}
 	
 	void OnBecameInvisible() {
+		//Destroys gameobjects when goes of screen
 		Destroy(gameObject);
 	}
 

@@ -17,12 +17,14 @@ public class HealthControl : MonoBehaviour {
 
 	void Start () {
 
-		health = 5;
+		PlayerPrefs.SetInt ("health", 5);
+		health =PlayerPrefs.GetInt ("health");
 		Health1.gameObject.SetActive(true);
 		Health2.gameObject.SetActive(true);
 		Health3.gameObject.SetActive(true);
 		Health4.gameObject.SetActive(true);
 		Health5.gameObject.SetActive(true);
+
 	
 	}
 
@@ -85,7 +87,7 @@ public class HealthControl : MonoBehaviour {
 			Health3.gameObject.SetActive (false);
 			Health4.gameObject.SetActive (false);
 			Health5.gameObject.SetActive (false);
-			SceneManager.LoadScene (5);
+			SceneManager.LoadScene (6);
 			break;
 		
 

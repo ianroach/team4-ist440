@@ -16,6 +16,7 @@ TagManager:
   - Meteor
   - SpaceShip
   - Cat
+  - Stop
   layers:
   - Default
   - TransparentFX

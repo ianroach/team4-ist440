@@ -72,4 +72,5 @@ public class AlienMovement : MonoBehaviour {
         GameObject splat = (GameObject)Instantiate(SplatAnimate);
         splat.transform.position = transform.position;
     }
+
 }
