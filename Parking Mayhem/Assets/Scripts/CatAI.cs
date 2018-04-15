@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class CatAI : MonoBehaviour {
 
+	public GameObject HairBall;
+
+	public AudioSource Catnoise;
+
+
     public Transform[] patrolPoints;
     public float speed;
     Transform currentPatrolPoint;
@@ -18,7 +23,7 @@ public class CatAI : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+		
         transform.Translate(Vector3.up * Time.deltaTime * speed);
         //Check to see if we have reached the patrol point
         if (Vector3.Distance(transform.position,currentPatrolPoint.position)  < 20f)
@@ -28,6 +33,8 @@ public class CatAI : MonoBehaviour {
             if (currentPatrolIndex + 1 < patrolPoints.Length)
             {
                 currentPatrolIndex++;
+				hairBallDrop();
+				Catnoise.Play ();
             }
             else
             {
@@ -44,6 +51,12 @@ public class CatAI : MonoBehaviour {
         //Apply the rotation to out transform
         transform.rotation = Quaternion.RotateTowards(transform.rotation, q, 360f);
     }
+	private void hairBallDrop ()
+	{
+		GameObject ball = (GameObject)Instantiate(HairBall);
+		ball.transform.position = transform.position;
+		Destroy (ball, 6);
+	}
     }
 
 
