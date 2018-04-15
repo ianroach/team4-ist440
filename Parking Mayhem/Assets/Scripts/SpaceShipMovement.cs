@@ -14,6 +14,8 @@ public class SpaceShipMovement : MonoBehaviour
     public GameObject BulletPosition_2;
     public GameObject ExplosionAnimate;
     public Vector3 StartPosition;
+    private bool invincible = false;
+    public Quaternion RotatePosition;
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
@@ -23,6 +25,7 @@ public class SpaceShipMovement : MonoBehaviour
     {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
+        RotatePosition = transform.rotation;
 
     }
 
@@ -64,8 +67,9 @@ public class SpaceShipMovement : MonoBehaviour
                 }
                 playExplosion();
                 HealthControl.health -= 1;
+                invincible = true;
+                Invoke("resetInvulnerability", 2);
                 Reset();
-
             }
         }
     }
@@ -73,6 +77,12 @@ public class SpaceShipMovement : MonoBehaviour
     private void Reset()
     {
         transform.position = StartPosition;
+        transform.rotation = RotatePosition;
+
+    }
+    void resetInvulnerability()
+    {
+        invincible = false;
     }
 
     private void playExplosion()
