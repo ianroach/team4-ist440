@@ -2202,6 +2202,7 @@ Transform:
   - {fileID: 45939809}
   - {fileID: 1515834572}
   - {fileID: 1667254401}
+  - {fileID: 717658737}
   m_Father: {fileID: 1838569006}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3781,8 +3782,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 605788830}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.82390994, y: 0.018120965, z: 0}
-  m_LocalScale: {x: 0.37924084, y: 1, z: 1}
+  m_LocalPosition: {x: -0.00193, y: 0.04, z: 0.8881822}
+  m_LocalScale: {x: 0.998984, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 622858452}
   m_RootOrder: 2
@@ -4025,6 +4026,14 @@ Prefab:
         type: 2}
       propertyPath: rotationSpeed
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012237204431178, guid: fff0eed125d4bbb4682736ac22202936, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351714739997192, guid: fff0eed125d4bbb4682736ac22202936, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff0eed125d4bbb4682736ac22202936, type: 2}
@@ -4520,11 +4529,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 717658736}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1985.9868, y: 390.22696, z: 128.44264}
-  m_LocalScale: {x: 0.62192, y: 0.15833029, z: 1}
+  m_LocalPosition: {x: -1985.9868, y: 390.227, z: 128.44264}
+  m_LocalScale: {x: 0.62191993, y: 0.15833029, z: 1}
   m_Children: []
-  m_Father: {fileID: 1022930506}
-  m_RootOrder: 7
+  m_Father: {fileID: 322509182}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &717658738
 SpriteRenderer:
@@ -9650,7 +9659,6 @@ Transform:
   - {fileID: 1677732945}
   - {fileID: 529697064}
   - {fileID: 837591112}
-  - {fileID: 717658737}
   m_Father: {fileID: 1838569006}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9872,7 +9880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61c926c580fd9d45923b447312957e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDelay: 5
+  spawnDelay: 3
   pedestrian:
   - {fileID: 1984697735718098, guid: a387fc2242646654bb3d0943bdd432a7, type: 2}
   - {fileID: 1779221265637114, guid: 5e8a28973ed913b49bcea38c325fe9d6, type: 2}
@@ -13212,12 +13220,12 @@ Prefab:
     - target: {fileID: 114338630812737796, guid: d8f17ba3f2826494abd6e7b88215da15,
         type: 2}
       propertyPath: power
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114338630812737796, guid: d8f17ba3f2826494abd6e7b88215da15,
         type: 2}
       propertyPath: maxspeed
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4456495744755662, guid: d8f17ba3f2826494abd6e7b88215da15, type: 2}
       propertyPath: m_LocalScale.x
