@@ -52,7 +52,7 @@ public class AlphaAI : MonoBehaviour {
         transform.Translate(Vector3.up * Time.deltaTime * speed);
         //Check to see if AI reached a patrol point
 
-        if (Vector3.Distance(transform.position, currentPatrolPoint.position) < 15f)
+        if (Vector3.Distance(transform.position, currentPatrolPoint.position) < 20f)
         {
             // Reached the patrol point and goes the the next one
             //CHeck to see if we have anymore patrol point, if not returns to first point
@@ -81,7 +81,7 @@ public class AlphaAI : MonoBehaviour {
     {
         //Chases Player
         //Get the distance to the target and check to see if it is close enough to chase
-
+     
         Vector3 patrolPointDir = currentPatrolPoint.position - transform.position;
         float angle = Mathf.Atan2(patrolPointDir.y, patrolPointDir.x) * Mathf.Rad2Deg - 90f;
         //Made the rotation that we need to face
