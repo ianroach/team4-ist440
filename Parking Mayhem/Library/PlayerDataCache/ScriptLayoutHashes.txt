@@ -8,6 +8,7 @@ Assets/Scenes/Darklevel.unity
 Assets/Scenes/Level3.unity
 Assets/Scenes/Level5.unity
 Assets/Scenes/GameOver.unity
+Assets/LocalLeaderboards/ExampleScenes/ShowLeaderboard.unity
 SceneListEnd?
 45a75901a78f05d2057b29a29dd005e8 Assembly-CSharp.dll:.MonsterTruckMovement
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -194,3 +195,8 @@ ba9102f13ae50dd6ec190c31b3112c59 Assembly-CSharp.dll:.MeteorSpawner
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Bullet
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ApplicationManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ChangeColor
+80b201b63dbd6c13e3f972a58584e92b Assembly-CSharp.dll:.LB_GameController
+d075c67d09cb70b7e73817a0026fd803 Assembly-CSharp.dll:.LB_JoystickTextInputController
+f141d60bb7b5edeaec3b712c72098817 Assembly-CSharp.dll:.LB_Leaderboard
+0f8bdb6211134842e6a203a5bc0fc9cf Assembly-CSharp.dll:.LB_StandardHighScores
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LB_MainMenuController

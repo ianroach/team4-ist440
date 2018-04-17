@@ -3,14 +3,14 @@ sceneSetups:
   isLoaded: 1
   isActive: 0
 - path: Assets/Scenes/LoadingScene.unity
-  isLoaded: 1
-  isActive: 1
+  isLoaded: 0
+  isActive: 0
 - path: Assets/Scenes/Level1.unity
   isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/Level2.unity
-  isLoaded: 0
-  isActive: 0
+  isLoaded: 1
+  isActive: 1
 - path: Assets/Scenes/Darklevel.unity
   isLoaded: 0
   isActive: 0
@@ -28,4 +28,7 @@ sceneSetups:
   isActive: 0
 - path: Assets/Scenes/GameOver.unity
   isLoaded: 0
+  isActive: 0
+- path: Assets/LocalLeaderboards/ExampleScenes/ShowLeaderboard.unity
+  isLoaded: 1
   isActive: 0

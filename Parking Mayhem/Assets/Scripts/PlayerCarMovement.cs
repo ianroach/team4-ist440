@@ -115,7 +115,7 @@ public class PlayerCarMovement : MonoBehaviour
 					playExplosion ();
 					HealthControl.health -= 1;
 					invincible = true;
-					Invoke ("resetInvulnerability", 2);
+					Invoke ("resetInvulnerability", 1);
 
 					Reset ();
 
@@ -127,7 +127,7 @@ public class PlayerCarMovement : MonoBehaviour
 					playSplat ();
 					HealthControl.health -= 1;
 					invincible = true;
-					Invoke ("resetInvulnerability", 2);
+					Invoke ("resetInvulnerability", 1);
 
 					Reset ();
 				}
@@ -136,7 +136,7 @@ public class PlayerCarMovement : MonoBehaviour
 					catPlayExplosion ();
 					HealthControl.health -= 1;
 					invincible = true;
-					Invoke ("resetInvulnerability", 2);
+					Invoke ("resetInvulnerability", 1);
 
 					Reset ();
 				}
