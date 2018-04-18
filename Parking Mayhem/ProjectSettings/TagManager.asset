@@ -17,6 +17,7 @@ TagManager:
   - SpaceShip
   - Cat
   - Stop
+  - Water
   layers:
   - Default
   - TransparentFX

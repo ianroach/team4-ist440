@@ -107,7 +107,7 @@ public class PlayerCarMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 		if (!invincible) {
-			if ((collision.tag == "Car") || (collision.tag == "Alien") || (collision.tag == "MonsterTruck")) {
+			if ((collision.tag == "Car") || (collision.tag == "Alien") || (collision.tag == "MonsterTruck") || (collision.tag == "Water")) {
 				if (HealthControl.health <= 5) {
 					if (collision.tag == "Car") {
 						Destroy (collision.gameObject);
