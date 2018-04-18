@@ -583,9 +583,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2170.5273, y: 415.39526, z: -23.894577}
+    m_Target: {x: -2093.1687, y: 353.4274, z: -24.724857}
     speed: 2
-    m_Value: {x: -2170.5273, y: 415.39526, z: -23.894577}
+    m_Value: {x: -2093.1687, y: 353.4274, z: -24.724857}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -613,9 +613,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 161.27422
+    m_Target: 246.63985
     speed: 2
-    m_Value: 161.27422
+    m_Value: 246.63985
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -712,29 +712,29 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 90fbffff
-    m_LastClickedID: -1136
-    m_ExpandedIDs: 8cfbffff90fbffff94fbffff00000000
+    m_SelectedIDs: 6ac7feff
+    m_LastClickedID: -80022
+    m_ExpandedIDs: 8cfbffff94fbffff9afbffff000000009e320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Pickups
+      m_OriginalName: Pickups
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -55690
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
   m_ExpandedScenes:
+  - Level1
   - Level3
-  - Level4
   - GameOver
   m_CurrenRootInstanceID: 0
   m_Locked: 0
@@ -766,7 +766,7 @@ MonoBehaviour:
     width: 593
     height: 403
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 90.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: -160
@@ -879,7 +879,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000a42b00005c300000a22b0000ae2d000074290000642c0000b82a0000da280000949d00008e9d00008a9d00005c7300008c2c0000e4780000307900007c79000046850000b264fbffaa320200be310000ce2d00006e2e00000e2c0000a4630000d4880000c6880000322d0000fe1d01001a1e0100fe2f0000d22f0000a46d0100ea31000000000000f6320000f43500006e280000f02d0000542d00002a2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

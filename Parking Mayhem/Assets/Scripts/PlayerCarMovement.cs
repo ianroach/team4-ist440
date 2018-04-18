@@ -139,6 +139,17 @@ public class PlayerCarMovement : MonoBehaviour
 					Invoke ("resetInvulnerability", 1);
 
 					Reset ();
+				} 
+			} else if (collision.tag == "Trap Door") {
+				if (HealthControl.health <= 5) {
+					ManScreamSound.Play ();
+					Destroy (collision.gameObject);
+					playSplat ();
+					HealthControl.health -= 1;
+					invincible = true;
+					Invoke ("resetInvulnerability", 1);
+
+					Reset ();
 				}
 			}
 		}
