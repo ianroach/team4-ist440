@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Reynaldo/Desktop/Parking_Mayhem_V2.4.6.exe
+C:/Users/Reynaldo/Desktop/Parking_Mayhem_V2.4.8.exe
 SceneListBegin?
 Assets/Scenes/Parking_Mayhem_Menu.unity
 Assets/Scenes/LoadingScene.unity

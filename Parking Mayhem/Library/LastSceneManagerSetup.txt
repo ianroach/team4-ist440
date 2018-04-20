@@ -1,7 +1,7 @@
 sceneSetups:
 - path: Assets/Scenes/Parking_Mayhem_Menu.unity
-  isLoaded: 0
-  isActive: 0
+  isLoaded: 1
+  isActive: 1
 - path: Assets/Scenes/LoadingScene.unity
   isLoaded: 0
   isActive: 0
@@ -18,14 +18,14 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/Level5.unity
-  isLoaded: 1
+  isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/Level4.unity
   isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/Space_Level.unity
-  isLoaded: 1
-  isActive: 1
+  isLoaded: 0
+  isActive: 0
 - path: Assets/Scenes/GameOver.unity
   isLoaded: 0
   isActive: 0
