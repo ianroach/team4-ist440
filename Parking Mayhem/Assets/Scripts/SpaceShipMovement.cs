@@ -16,6 +16,7 @@ public class SpaceShipMovement : MonoBehaviour
     public Vector3 StartPosition;
     private bool invincible = false;
     public Quaternion RotatePosition;
+    private ScoreManager scores;
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
@@ -25,8 +26,8 @@ public class SpaceShipMovement : MonoBehaviour
     {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
-        RotatePosition = transform.rotation;
-
+        transform.position = new Vector3(-2050.0f, -369f, 0.0f);
+        scores = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -68,7 +69,7 @@ public class SpaceShipMovement : MonoBehaviour
                 playExplosion();
                 HealthControl.health -= 1;
                 invincible = true;
-                Invoke("resetInvulnerability", 2);
+                Invoke("resetInvulnerability", 1);
                 Reset();
             }
         }
@@ -77,8 +78,6 @@ public class SpaceShipMovement : MonoBehaviour
     private void Reset()
     {
         transform.position = StartPosition;
-        transform.rotation = RotatePosition;
-
     }
     void resetInvulnerability()
     {
