@@ -27,20 +27,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Level5.unity
     guid: 7635dd18f95d98446801a1442e5badc5
   - enabled: 1
+    path: Assets/Scenes/Space_Level.unity
+    guid: 1d94be158b844e242b1d1385278bf759
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: c7992765dc9ed3c459278cd295a1e282
   - enabled: 0
-    path: Assets/Scenes/Space_Level.unity
-    guid: 1d94be158b844e242b1d1385278bf759
-  - enabled: 0
     path: Assets/Scenes/Level4.unity
     guid: 6fec4713b7791424fbb77b4dbdbc0c87
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/LocalLeaderboards/ExampleScenes/ShowLeaderboard.unity
     guid: c1acccfe53c488f40aa1782b2b4681b6
