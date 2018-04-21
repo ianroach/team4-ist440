@@ -19,6 +19,8 @@ TagManager:
   - Stop
   - Water
   - Trap Door
+  - Player2
+  - Wall
   layers:
   - Default
   - TransparentFX

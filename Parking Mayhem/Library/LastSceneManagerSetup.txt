@@ -1,7 +1,7 @@
 sceneSetups:
 - path: Assets/Scenes/Parking_Mayhem_Menu.unity
-  isLoaded: 1
-  isActive: 1
+  isLoaded: 0
+  isActive: 0
 - path: Assets/Scenes/LoadingScene.unity
   isLoaded: 0
   isActive: 0
@@ -32,3 +32,6 @@ sceneSetups:
 - path: Assets/LocalLeaderboards/ExampleScenes/ShowLeaderboard.unity
   isLoaded: 0
   isActive: 0
+- path: Assets/Scenes/MultLevel.unity
+  isLoaded: 1
+  isActive: 1
