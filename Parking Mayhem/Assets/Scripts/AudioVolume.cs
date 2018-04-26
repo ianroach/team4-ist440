@@ -6,7 +6,7 @@ public class AudioVolume : MonoBehaviour {
 
 
     float value = 100f;
-    AudioSource source;
+   public static AudioSource source;
     // Use this for initialization
     void Start()
     {
