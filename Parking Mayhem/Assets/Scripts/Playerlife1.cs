@@ -10,6 +10,7 @@ public class Playerlife1 : MonoBehaviour {
     public float currentLife { get; set; }
     public Multlvlhealth1 health;
 
+	public GameObject destroyExplosion;
     public Text lifetext;
 
 	void Start () {
@@ -29,15 +30,28 @@ public class Playerlife1 : MonoBehaviour {
     {
         
             currentLife--;   
+		if (currentLife <= 0) 
+		{	
+			playExplosion ();
+			Destroy (this.gameObject);
+
+			endGame ();
+		}
     }
    
 
     public void endGame()
     {
-        if (currentLife == 0)
-        {
+  
+       
 			SceneManager.LoadScene ("Player2WinScene");
-        }
+        
     }
+	private void playExplosion ()
+	{
+		GameObject explosion = (GameObject)Instantiate(destroyExplosion);
+		explosion.transform.position = transform.position;
+
+	}
     
 }

@@ -14,7 +14,7 @@ public class Multlvlhealth1 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-		life = GetComponent<Playerlife1> ();
+		
         MaxHealth = 100f;
         CurrHealth = MaxHealth;
         Healthbar.value = CalculateHealth();
@@ -33,15 +33,12 @@ public class Multlvlhealth1 : MonoBehaviour
     {
 
         CurrHealth -= damage;
-        Healthbar.value = CalculateHealth();
-        if (CurrHealth <= 0)
-        {
-			CurrHealth = 0; 
-            
-             ResetCurrentHealth();
-            
-		
 
+        Healthbar.value = CalculateHealth();
+
+        if (CurrHealth <= 0)
+		{
+             ResetCurrentHealth();
         }
 
 
@@ -60,13 +57,14 @@ public class Multlvlhealth1 : MonoBehaviour
     public void ResetCurrentHealth()
     {
 
-
-        player.GetComponent<Player1Controlls>();
 		CurrHealth = MaxHealth;
-        player.Reset();
+		Healthbar.value = CalculateHealth ();
+        player.GetComponent<Player1Controlls>();
+
+      
 		life.takeLife ();
 
-	
+		player.Reset ();
 
     }
 

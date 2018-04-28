@@ -63,6 +63,7 @@ public class Multlvlhealth2 : MonoBehaviour
     public void ResetCurrentHealth()
     {
 
+		Healthbar.value = CalculateHealth();
 
         player.GetComponent<Player1Controlls>();
 		CurrHealth = MaxHealth;
