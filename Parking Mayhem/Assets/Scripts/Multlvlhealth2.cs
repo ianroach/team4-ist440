@@ -8,18 +8,18 @@ public class Multlvlhealth2 : MonoBehaviour
     public float CurrHealth { get; set; }
     public float MaxHealth { get; set; }
     public Player2 player;
-    public Playerlife1 life;
+    public Playerlife2 life;
 
     public Slider Healthbar;
     // Use this for initialization
     void Start()
     {
-
+		life = GetComponent<Playerlife2> ();
         MaxHealth = 100f;
         CurrHealth = MaxHealth;
         Healthbar.value = CalculateHealth();
 
-        life = GetComponent<Playerlife1>();
+        life = GetComponent<Playerlife2>();
         // Resets health to full on game load
 
     }
@@ -65,11 +65,10 @@ public class Multlvlhealth2 : MonoBehaviour
 
 
         player.GetComponent<Player1Controlls>();
-
+		CurrHealth = MaxHealth;
         player.Reset();
 
-
-        life.takeLife(1);
+		life.takeLife ();
 
     }
 

@@ -1797,6 +1797,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 49.43794, y: 100}
   m_EdgeRadius: 0
+--- !u!114 &713564614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 713564611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192775bc4e5f27147a9a077c84334d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 713564616}
+  lifetext: {fileID: 1956121038}
 --- !u!114 &713564616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1809,6 +1822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 713564612}
+  life: {fileID: 713564614}
   Healthbar: {fileID: 1653285887}
 --- !u!1 &719137235
 GameObject:
@@ -5635,6 +5649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2136425936}
+  life: {fileID: 0}
   Healthbar: {fileID: 187079286}
 --- !u!114 &2136425938
 MonoBehaviour:

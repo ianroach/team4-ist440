@@ -24,5 +24,11 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/MultLevel.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/Player1WinScene.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Scenes/Player2WinScene.unity
+  isLoaded: 0
+  isActive: 0

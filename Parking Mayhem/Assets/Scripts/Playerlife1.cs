@@ -16,23 +16,19 @@ public class Playerlife1 : MonoBehaviour {
         health = GetComponent<Multlvlhealth1>();
         maxLife = 25;
         currentLife = maxLife;
-        lifetext.text = "X"+ calculateLife().ToString();
+      
 	}
-	 public float calculateLife()
-    {
-        return currentLife / maxLife;
-    }
+
+   
 
 	void Update () {
-		
+		lifetext.text = "X"+ currentLife.ToString();
 	}
 
-    public void takeLife(float life)
+    public void takeLife()
     {
         
-            currentLife -= life;
-          
-       
+            currentLife--;   
     }
    
 
@@ -40,7 +36,7 @@ public class Playerlife1 : MonoBehaviour {
     {
         if (currentLife == 0)
         {
-
+			SceneManager.LoadScene ("Player2WinScene");
         }
     }
     

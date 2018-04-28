@@ -41,3 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MultLevel.unity
     guid: 911bc59786b6bc742936b5b5f6cd2822
+  - enabled: 1
+    path: Assets/Scenes/Player1WinScene.unity
+    guid: a075eb5d7029f974f804f17b276ce5df
+  - enabled: 1
+    path: Assets/Scenes/Player2WinScene.unity
+    guid: 6c772ba8e3468a94ea563da65f526836
