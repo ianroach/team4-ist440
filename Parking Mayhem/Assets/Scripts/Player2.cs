@@ -8,8 +8,9 @@ public class Player2 : MonoBehaviour {
 	public Quaternion RotatePosition;
 	public GameObject projectile2;
 
-
-	new Rigidbody2D rigidbody2D;
+    public Multlvlhealth2 health;
+    public GameObject LittleExplositionAnimate;
+    new Rigidbody2D rigidbody2D;
 
 	public Transform target;
 	public float fireForce;
@@ -108,4 +109,29 @@ void noGas()
 
 
 	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        health = GetComponent<Multlvlhealth2>();
+
+        if (collision.tag == "Player")
+        {
+            LittleExplosion();
+            health.DealDamage(5);
+            Destroy(collision.gameObject);
+
+        }
+
+    }
+    public void Reset()
+    {
+
+        transform.position = StartPosition;
+        transform.rotation = RotatePosition;
+
+    }
+    private void LittleExplosion()
+    {
+        GameObject Smallexplode = (GameObject)Instantiate(LittleExplositionAnimate);
+        Smallexplode.transform.position = transform.position;
+    }
 }

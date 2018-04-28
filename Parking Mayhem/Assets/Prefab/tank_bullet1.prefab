@@ -21,11 +21,10 @@ GameObject:
   - component: {fileID: 4484038045696680}
   - component: {fileID: 212785004895413984}
   - component: {fileID: 50438460597138346}
-  - component: {fileID: 114606109867806734}
   - component: {fileID: 61361265639188914}
   m_Layer: 0
   m_Name: tank_bullet1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,18 +87,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.124155395, y: 0.12160379}
   m_EdgeRadius: 0
---- !u!114 &114606109867806734
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1082441591092410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a05dc32d7ad080b4fad68339fde61abf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  play2: {fileID: 1250919764661912, guid: 92d717f520c1cd640af0b9a122692328, type: 2}
 --- !u!212 &212785004895413984
 SpriteRenderer:
   m_ObjectHideFlags: 1
