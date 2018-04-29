@@ -22,6 +22,12 @@ TagManager:
   - Player2
   - Wall
   - earth
+  - ExtraDamage
+  - blaster
+  - beam
+  - DestroyDamage
+  - DestroyDamage2
+  - ExtraDamage2
   layers:
   - Default
   - TransparentFX

@@ -35,13 +35,14 @@ public class Multlvlhealth2 : MonoBehaviour
 
         CurrHealth -= damage;
         Healthbar.value = CalculateHealth();
-        if (CurrHealth == 0)
+        if (CurrHealth <= 0)
         {
             player.GetComponent<Player2>();
 
             CurrHealth = MaxHealth;
 
             ResetCurrentHealth();
+
 
 
 

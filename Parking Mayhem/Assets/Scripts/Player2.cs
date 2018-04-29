@@ -6,16 +6,33 @@ public class Player2 : MonoBehaviour {
 
 	public Vector3 StartPosition;
 	public Quaternion RotatePosition;
+
+	public GameObject projectile1;
 	public GameObject projectile2;
+	public GameObject projectile3;
+
+	public AudioSource pickup1;
+	public AudioSource pickup2;
+	public AudioSource shoot;
+	public AudioSource shoot2;
+	public AudioSource shoot3;
+
+	public int typeshot = 1;
 
     public Multlvlhealth2 health;
     public GameObject LittleExplositionAnimate;
     new Rigidbody2D rigidbody2D;
 
 	public Transform target;
-	public float fireForce;
 
 	public float timeBetweenShots = 0.3333f;
+	public float timeBetweenShots2 = 0.50f;
+	public float timeBetweenShots3 = 5f;
+
+	public float fireForce;
+	public float fireForce2;
+	public float fireForce3;
+
 	private float timestamp;
 
 	public float power = 3;
@@ -66,7 +83,20 @@ public class Player2 : MonoBehaviour {
 	}
 		if (Time.time >= timestamp && (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.RightShift)))
 	{
-		Attack ();
+			switch (typeshot){
+			case 1:
+				Attack ();
+				break;
+			case 2:
+			default:
+
+				SpecialAttack ();
+				break;
+			case 3:
+
+				MegaAttack ();
+				break;
+			}
 	}
 
 	noGas();
@@ -93,6 +123,7 @@ void noGas()
 
 	void Attack ()
 	{
+		shoot.Play ();
 		timestamp = Time.time + timeBetweenShots;
 		Vector3 targetDir2 = target.position - transform.position;
 		float angle = Mathf.Atan2(targetDir2.y, targetDir2.x) * Mathf.Rad2Deg - 90f;
@@ -100,34 +131,87 @@ void noGas()
 		transform.rotation = Quaternion.RotateTowards(transform.rotation, q, 90 * Time.deltaTime);
 
 
-		GameObject newFire2 = Instantiate (projectile2, transform.position, transform.rotation);
+		GameObject newFire2 = Instantiate (projectile1, transform.position, transform.rotation);
 		newFire2.GetComponent<Rigidbody2D> ().AddRelativeForce (new Vector2 (0f, fireForce));
 
+	}
+
+	void SpecialAttack()
+	{
+		shoot2.Play ();
+		timestamp = Time.time + timeBetweenShots2;
+
+
+		Vector3 targetDir1 = target.position - transform.position;
+		float angle = Mathf.Atan2 (targetDir1.y, targetDir1.x) * Mathf.Rad2Deg - 90f;
+		Quaternion q = Quaternion.AngleAxis (angle, Vector3.forward);
+		transform.rotation = Quaternion.RotateTowards (transform.rotation, q, 90 * Time.deltaTime);
 
 
 
+		GameObject newFire2 = Instantiate (projectile2, transform.position, transform.rotation);
+		newFire2.GetComponent<Rigidbody2D> ().AddRelativeForce (new Vector2 (0f, fireForce2));
+	}
+
+	void MegaAttack()
+	{
+		shoot3.Play ();
+		timestamp = Time.time + timeBetweenShots3;
 
 
+		Vector3 targetDir1 = target.position - transform.position;
+		float angle = Mathf.Atan2 (targetDir1.y, targetDir1.x) * Mathf.Rad2Deg - 90f;
+		Quaternion q = Quaternion.AngleAxis (angle, Vector3.forward);
+		transform.rotation = Quaternion.RotateTowards (transform.rotation, q, 270);
+
+
+
+		GameObject newFire2 = Instantiate (projectile3, transform.position, transform.rotation);
+		newFire2.GetComponent<Rigidbody2D> ().AddRelativeForce (new Vector2 (0f, fireForce3));
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
         health = GetComponent<Multlvlhealth2>();
 
-        if (collision.tag == "Player")
-        {
-            LittleExplosion();
-            health.DealDamage(5);
-            Destroy(collision.gameObject);
+		if (collision.tag == "Player") {
+			LittleExplosion ();
+			health.DealDamage (5);
+			Destroy (collision.gameObject);
 
-        }
+		} 
+		if (collision.tag == "ExtraDamage") 
+		{
+			LittleExplosion ();
+			health.DealDamage (15);
+			Destroy (collision.gameObject);
+		}
+		if (collision.tag == "DestroyDamage")
+		{
+			
+			health.DealDamage (50);
+			Destroy (collision.gameObject);
+		}
+		if (collision.tag == "blaster")
+		{
+			pickup1.Play ();
+			typeshot = 2;
+			Destroy (collision.gameObject);
+		}
+		if (collision.tag == "beam")
+		{
+			pickup2.Play ();
+			typeshot = 3;
+			Destroy (collision.gameObject);
+		}
+
 
     }
     public void Reset()
     {
-
+		typeshot = 1;
         transform.position = StartPosition;
         transform.rotation = RotatePosition;
-
+	
     }
     private void LittleExplosion()
     {
