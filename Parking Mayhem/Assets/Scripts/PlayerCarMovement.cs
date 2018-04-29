@@ -119,7 +119,7 @@ public class PlayerCarMovement : MonoBehaviour
 
 					Reset ();
 
-				}
+				} 
 			} else if (collision.tag == "Ped") {
 				if (HealthControl.health <= 5) {
 					ManScreamSound.Play ();
@@ -153,7 +153,11 @@ public class PlayerCarMovement : MonoBehaviour
 				}
 			}
 		}
-        
+		 if (collision.tag == "BigMomma") 
+		{
+			playExplosion ();
+			SceneManager.LoadScene ("GameOver");
+		}
 		if (collision.tag == "Gsol") {
 			scores.count += 100;
          
