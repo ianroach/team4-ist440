@@ -21,6 +21,7 @@ TagManager:
   - Trap Door
   - Player2
   - Wall
+  - earth
   layers:
   - Default
   - TransparentFX

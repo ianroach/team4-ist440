@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SpaceShipMovement : MonoBehaviour
 {
@@ -17,9 +19,13 @@ public class SpaceShipMovement : MonoBehaviour
     private bool invincible = false;
     public Quaternion RotatePosition;
     private ScoreManager scores;
+    public AudioSource coinSoundEffect;
+    public AudioSource Pickupsound;
+
+    public Text CoinPlus;
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
-
+    new Rigidbody2D rigidbody2D;
 
     // Use this for initialization
     void Start()
@@ -27,6 +33,13 @@ public class SpaceShipMovement : MonoBehaviour
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
         transform.position = new Vector3(-2050.0f, -369f, 0.0f);
+        scores = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
+
+        rigidbody2D = GetComponent<Rigidbody2D>();
+        StartPosition = transform.position;
+        RotatePosition = transform.rotation;
+
+        CoinPlus.text = "";
         scores = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
     }
 
@@ -72,7 +85,37 @@ public class SpaceShipMovement : MonoBehaviour
                 Invoke("resetInvulnerability", 1);
                 Reset();
             }
+
+            if (collision.tag == "earth")
+            {
+                scores.count += 100;
+
+                SceneManager.LoadScene(11);
+
+                StartCoroutine(ShowMessage("+100", 1));
+            }
+            else if (collision.gameObject.tag == "PickUp")
+            {
+                coinSoundEffect.Play();
+                Destroy(collision.gameObject);
+                scores.count += 50;
+                StartCoroutine(ShowMessage("+50", 2));
+            }
+            else if (collision.gameObject.tag == "Stop")
+            {
+                Pickupsound.Play();
+                Destroy(collision.gameObject);
+            }
         }
+    }
+
+    IEnumerator ShowMessage(string message, float delay)
+    {
+        CoinPlus.text = message;
+        CoinPlus.enabled = true;
+
+        yield return new WaitForSeconds(delay);
+        CoinPlus.enabled = false;
     }
 
     private void Reset()

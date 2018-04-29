@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MeteorSpawner : MonoBehaviour {
 
-    public float timer;                //Time after which spawn time will decrease. In your case '10 s'.
-    public float spawnTimer;            //Time after which Object spawns. In your case '1.5 s'
-    public float decreasedSpawnTimer;     //Time which we will decrease to speed up Spawn. In your case '0.1 s'
+    public float timer;                
+    public float spawnTimer;            
+    public float decreasedSpawnTimer;     
 
     public GameObject[] Meteor;
 
@@ -51,7 +51,7 @@ public class MeteorSpawner : MonoBehaviour {
 
     void Destroymeteor()
     {
-        if (timer == 40)    //TIme when spawn time decreases
+        if (timer == 40)    //TIme when spawner is destroyed
         {
             Destroy(gameObject);
         }

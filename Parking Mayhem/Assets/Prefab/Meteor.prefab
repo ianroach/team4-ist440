@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114677019442726040}
   - component: {fileID: 114922512314118574}
   - component: {fileID: 114612334763782168}
+  - component: {fileID: 114591081667491992}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: Meteor
@@ -80,6 +81,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.445
+--- !u!114 &114591081667491992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1011460724212498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9078f473ac5d54bab141141c0b46ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114612334763782168
 MonoBehaviour:
   m_ObjectHideFlags: 1
