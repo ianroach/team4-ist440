@@ -957,7 +957,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1138915333
+  randomSeed: -1805735994
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4450,6 +4450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 686805706}
   - component: {fileID: 686805705}
+  - component: {fileID: 686805707}
   m_Layer: 2
   m_Name: Meteor Spawner
   m_TagString: Untagged
@@ -4468,7 +4469,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073180dd50838eb4bbda4147f8afe7eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDelay: 1
+  timer: 10
+  spawnTimer: 10
+  decreasedSpawnTimer: 0.5
   Meteor:
   - {fileID: 1011460724212498, guid: be2cf391ca545cd48aa968f627c569cb, type: 2}
   - {fileID: 1011460724212498, guid: be2cf391ca545cd48aa968f627c569cb, type: 2}
@@ -4511,6 +4514,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &686805707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686805704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5998fcadad8de4943a57b86b36b37707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 45
 --- !u!1 &697122078
 GameObject:
   m_ObjectHideFlags: 0
@@ -4968,7 +4983,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1142118321}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 90, y: 0.1, z: 0}
+  m_LocalPosition: {x: 60.66, y: 0.1, z: 0}
   m_LocalScale: {x: 1.0000005, y: 1.0000005, z: 1}
   m_Children: []
   m_Father: {fileID: 686805706}
@@ -5144,7 +5159,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1185374075}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -180, y: 3.9, z: 0}
+  m_LocalPosition: {x: -140.81, y: 3.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 686805706}
@@ -5172,7 +5187,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1206341339}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: -1, y: 20, z: 0}
+  m_LocalPosition: {x: -1, y: 7, z: 0}
   m_LocalScale: {x: 0.80981, y: 0.80981, z: 0.80981}
   m_Children: []
   m_Father: {fileID: 686805706}

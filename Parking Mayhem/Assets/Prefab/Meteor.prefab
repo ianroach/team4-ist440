@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212335275027285970}
   - component: {fileID: 58280704489649970}
   - component: {fileID: 50504276788162352}
-  - component: {fileID: 114945829634525354}
   - component: {fileID: 114677019442726040}
   - component: {fileID: 114922512314118574}
+  - component: {fileID: 114612334763782168}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: Meteor
@@ -80,6 +80,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.445
+--- !u!114 &114612334763782168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1011460724212498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2c22468b09670428031a03a6cc0cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 50504276788162352}
+  minSpeed: 80
+  maxSpeed: 80
 --- !u!114 &114677019442726040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,20 +118,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplosionAnimate: {fileID: 1615187465665952, guid: e301460ad0e42004b888ec7c7799779c,
     type: 2}
---- !u!114 &114945829634525354
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1011460724212498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c53857cae13b21e4bb47e7e21a5d5f0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 50504276788162352}
-  minSpeed: 40
-  maxSpeed: 60
 --- !u!212 &212335275027285970
 SpriteRenderer:
   m_ObjectHideFlags: 1

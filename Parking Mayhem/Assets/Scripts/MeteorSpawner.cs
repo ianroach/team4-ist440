@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MeteorSpawner : MonoBehaviour {
 
-    public float spawnDelay = 0.3f;
-
-    float nextTimeToSpawn = 0f;
+    public float timer;                //Time after which spawn time will decrease. In your case '10 s'.
+    public float spawnTimer;            //Time after which Object spawns. In your case '1.5 s'
+    public float decreasedSpawnTimer;     //Time which we will decrease to speed up Spawn. In your case '0.1 s'
 
     public GameObject[] Meteor;
 
@@ -24,12 +24,22 @@ public class MeteorSpawner : MonoBehaviour {
 
     void Update()
     {
+        timer -= Time.deltaTime;    //Decreases time
+        spawnTimer -= Time.deltaTime;    //Decreases time
 
-        if (nextTimeToSpawn <= Time.time)
+        if (spawnTimer < 0)    //Time when spawn happens
         {
-            SpawnMeteor();
-            nextTimeToSpawn = Time.time + spawnDelay;
+            spawnTimer = decreasedSpawnTimer;    //Assigns the modified spawn time
+            SpawnMeteor();    //Spawn command here
         }
+
+        if (timer < 0)    //TIme when spawn time decreases
+        {
+            timer = 10;
+            decreasedSpawnTimer -= 0.1f;    //Time by which spawn time is reduced.
+        }
+
+        Destroymeteor();
     }
 
     void SpawnMeteor()
@@ -37,6 +47,15 @@ public class MeteorSpawner : MonoBehaviour {
         int randomIndex = Random.Range(0, spawnPoints.Length);
         Transform spawnPoint = spawnPoints[randomIndex];
         Instantiate(Meteor[Random.Range(0, Meteor.Length)], spawnPoint.position, spawnPoint.rotation);
+    }
+
+    void Destroymeteor()
+    {
+        if (timer == 40)    //TIme when spawn time decreases
+        {
+            Destroy(gameObject);
+        }
+
     }
 }
 
