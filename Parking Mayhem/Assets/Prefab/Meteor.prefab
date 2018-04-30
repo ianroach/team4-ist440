@@ -104,8 +104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 50504276788162352}
-  minSpeed: 80
-  maxSpeed: 80
+  minSpeed: 90
+  maxSpeed: 90
 --- !u!114 &114677019442726040
 MonoBehaviour:
   m_ObjectHideFlags: 1
