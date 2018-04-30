@@ -10,12 +10,19 @@ public class Player2 : MonoBehaviour {
 	public GameObject projectile1;
 	public GameObject projectile2;
 	public GameObject projectile3;
+	public GameObject projectile4;
+
 
 	public AudioSource pickup1;
 	public AudioSource pickup2;
+	public AudioSource pickup3;
+
+
 	public AudioSource shoot;
 	public AudioSource shoot2;
 	public AudioSource shoot3;
+	public AudioSource shoot4;
+
 
 	public int typeshot = 1;
 
@@ -28,10 +35,12 @@ public class Player2 : MonoBehaviour {
 	public float timeBetweenShots = 0.3333f;
 	public float timeBetweenShots2 = 0.50f;
 	public float timeBetweenShots3 = 5f;
+	public float timeBetweenShots4 = 5f;
 
 	public float fireForce;
 	public float fireForce2;
 	public float fireForce3;
+	public float fireForce4;
 
 	private float timestamp;
 
@@ -93,10 +102,15 @@ public class Player2 : MonoBehaviour {
 				SpecialAttack ();
 				break;
 			case 3:
+				RapidAttack ();
 
+				break;
+
+			case 4:
 				MegaAttack ();
 				break;
 			}
+
 	}
 
 	noGas();
@@ -169,6 +183,23 @@ void noGas()
 		GameObject newFire2 = Instantiate (projectile3, transform.position, transform.rotation);
 		newFire2.GetComponent<Rigidbody2D> ().AddRelativeForce (new Vector2 (0f, fireForce3));
 	}
+	void RapidAttack()
+	{
+		shoot4.Play ();
+		timestamp = Time.time + timeBetweenShots4;
+
+
+		Vector3 targetDir1 = target.position - transform.position;
+		float angle = Mathf.Atan2 (targetDir1.y, targetDir1.x) * Mathf.Rad2Deg - 90f;
+		Quaternion q = Quaternion.AngleAxis (angle, Vector3.forward);
+		transform.rotation = Quaternion.RotateTowards (transform.rotation, q, 90 * Time.deltaTime);
+
+
+
+		GameObject newFire2 = Instantiate (projectile4, transform.position, transform.rotation);
+		newFire2.GetComponent<Rigidbody2D> ().AddRelativeForce (new Vector2 (0f, fireForce4));
+	}	
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         health = GetComponent<Multlvlhealth2>();
@@ -191,6 +222,12 @@ void noGas()
 			health.DealDamage (50);
 			Destroy (collision.gameObject);
 		}
+		if (collision.tag == "RapidDamage") 
+		{
+			LittleExplosion ();
+			health.DealDamage (10);
+			Destroy (collision.gameObject);
+		}
 		if (collision.tag == "blaster")
 		{
 			pickup1.Play ();
@@ -200,10 +237,15 @@ void noGas()
 		if (collision.tag == "beam")
 		{
 			pickup2.Play ();
+			typeshot = 4;
+			Destroy (collision.gameObject);
+		}
+		if (collision.tag == "rapid") 
+		{
+			pickup3.Play ();
 			typeshot = 3;
 			Destroy (collision.gameObject);
 		}
-
 
     }
     public void Reset()

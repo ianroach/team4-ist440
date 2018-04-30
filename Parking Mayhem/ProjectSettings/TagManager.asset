@@ -29,6 +29,10 @@ TagManager:
   - DestroyDamage2
   - ExtraDamage2
   - BigMomma
+  - Big
+  - rapid
+  - RapidDamage
+  - RapidDamage2
   layers:
   - Default
   - TransparentFX

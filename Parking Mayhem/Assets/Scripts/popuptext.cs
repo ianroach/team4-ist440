@@ -9,7 +9,7 @@ public class popuptext : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine (ShowMessage ("HURRY BEFORE THEY GET YOU!!!", 2));
+		StartCoroutine (ShowMessage ("HURRY BEFORE THEY GET YOU!!!", 4));
 	}
 	
 	IEnumerator ShowMessage (string message, float delay)

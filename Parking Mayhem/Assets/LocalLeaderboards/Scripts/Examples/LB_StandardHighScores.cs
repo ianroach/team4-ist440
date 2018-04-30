@@ -72,6 +72,7 @@ public class LB_StandardHighScores : MonoBehaviour
 
 	void Start ()
 	{
+		ScoreManager.resetScore ();
 		// show or hide the reset leaderboard button (useful for development)
 		if ( showResetButton )
 		{

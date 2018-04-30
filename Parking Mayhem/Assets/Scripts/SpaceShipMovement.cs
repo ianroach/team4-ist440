@@ -88,7 +88,8 @@ public class SpaceShipMovement : MonoBehaviour
 
             if (collision.tag == "earth")
             {
-                scores.count += 100;
+				ScoreManager.addScore (100);
+
 
                 SceneManager.LoadScene(11);
 
@@ -98,7 +99,8 @@ public class SpaceShipMovement : MonoBehaviour
             {
                 coinSoundEffect.Play();
                 Destroy(collision.gameObject);
-                scores.count += 50;
+				ScoreManager.addScore (50);
+
                 StartCoroutine(ShowMessage("+50", 2));
             }
             else if (collision.gameObject.tag == "Stop")

@@ -12,6 +12,7 @@ public class PlayerCarMovement : MonoBehaviour
     public GameObject ExplosionAnimate;
     public GameObject CatExplosionAnimate;
 	public GameObject Bullet;
+	public GameObject Bullet2;
 
     public AudioSource coinSoundEffect;
 	public AudioSource ManScreamSound;
@@ -31,7 +32,7 @@ public class PlayerCarMovement : MonoBehaviour
     
 
     new Rigidbody2D rigidbody2D;
-    private ScoreManager scores;
+
 	private bool invincible = false;
 
 
@@ -45,7 +46,7 @@ public class PlayerCarMovement : MonoBehaviour
         RotatePosition = transform.rotation;
         
         CoinPlus.text = "";
-        scores = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
+    
 
     }
 
@@ -159,7 +160,7 @@ public class PlayerCarMovement : MonoBehaviour
 			SceneManager.LoadScene ("GameOver");
 		}
 		if (collision.tag == "Gsol") {
-			scores.count += 100;
+			ScoreManager.addScore (100);
          
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1); // Loads the next scene in next sequential order //  
 
@@ -167,13 +168,22 @@ public class PlayerCarMovement : MonoBehaviour
 		} else if (collision.gameObject.tag == "PickUp") {
 			coinSoundEffect.Play ();
 			Destroy (collision.gameObject);
-			scores.count += 50;
+			ScoreManager.addScore (50);
+
 			StartCoroutine (ShowMessage ("+50", 2)); 
+
 		} else if (collision.gameObject.tag == "Stop") 
 		{
 			Pickupsound.Play ();
 			Destroy (collision.gameObject);
 			bullet ();
+		}
+
+		else if (collision.gameObject.tag == "Big")
+		{
+			Pickupsound.Play ();
+			Destroy (collision.gameObject);
+			bullet2 ();
 		}
 	
     }
@@ -227,4 +237,10 @@ public class PlayerCarMovement : MonoBehaviour
 		GameObject bullet = (GameObject)Instantiate(Bullet);
 		bullet.transform.position = transform.position;
 	}
+	private void bullet2 ()
+	{
+		GameObject bullet = (GameObject)Instantiate(Bullet2);
+		bullet.transform.position = transform.position;
+	}
+
 }

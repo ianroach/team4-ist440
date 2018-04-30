@@ -9,7 +9,7 @@ public class LB_GameController : MonoBehaviour {
 
 	void Start () {
         // set the score text to a random number at the start of the scene
-        scoreUIText.text = Random.Range(0, 10000).ToString();
+		scoreUIText.text = ScoreManager.score.ToString();
 	}
 
     public void GameOver()

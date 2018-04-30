@@ -4,16 +4,44 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour {
 
-	public int count;
+	public static float score = 0;
 
+	public static Text ScoreText;
 
-	public Text ScoreText;
-
+	public string scoreTextName = "ScoreText";
 
 	// Update is called once per frame
 	void Update () {
 
-		ScoreText.text = "Score: " + count.ToString();
-
+		DontDestroyOnLoad (gameObject);
+		ScoreText = GameObject.Find (scoreTextName).GetComponent<Text> ();
+		calculateScoreText ();
 	}
+
+	public static float getScore()
+	{
+		return score;
+	}
+
+	public static void addScore(float count)
+	{
+		score += count;
+		calculateScoreText ();
+	}
+
+	public static void resetScore ()
+	{
+		score = 0;
+	}
+
+	public static void calculateScoreText ()
+	{
+		if (ScoreText != null)
+		{
+			ScoreText.text = "Score:" + score.ToString ();
+		}
+			
+	}
+
+
 }

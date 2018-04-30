@@ -30,11 +30,11 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/Player2WinScene.unity
-  isLoaded: 0
-  isActive: 0
-- path: Assets/Scenes/Space_Level.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Scenes/Space_Level.unity
+  isLoaded: 0
+  isActive: 0
 - path: Assets/LocalLeaderboards/ExampleScenes/ShowLeaderboard.unity
   isLoaded: 0
   isActive: 0
