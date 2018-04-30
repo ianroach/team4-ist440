@@ -29,6 +29,7 @@ public class Playerlife2 : MonoBehaviour {
 	{
 
 		currentLife--;   
+		playExplosion ();
 		if (currentLife <= 0) 
 		{	
 			playExplosion ();

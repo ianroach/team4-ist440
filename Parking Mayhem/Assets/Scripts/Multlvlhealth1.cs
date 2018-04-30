@@ -61,7 +61,7 @@ public class Multlvlhealth1 : MonoBehaviour
 		Healthbar.value = CalculateHealth ();
         player.GetComponent<Player1Controlls>();
 
-      
+      	
 		life.takeLife ();
 
 		player.Reset ();
