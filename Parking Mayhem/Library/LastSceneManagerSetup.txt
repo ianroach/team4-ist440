@@ -12,8 +12,8 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/Darklevel.unity
-  isLoaded: 1
-  isActive: 1
+  isLoaded: 0
+  isActive: 0
 - path: Assets/Scenes/Level3.unity
   isLoaded: 0
   isActive: 0
@@ -33,5 +33,11 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/Space_Level.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/LocalLeaderboards/ExampleScenes/ShowLeaderboard.unity
+  isLoaded: 1
+  isActive: 1
+- path: Assets/Scenes/GameOver.unity
   isLoaded: 0
   isActive: 0
