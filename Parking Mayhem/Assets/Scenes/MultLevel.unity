@@ -9374,7 +9374,7 @@ Prefab:
     - target: {fileID: 114182107839329604, guid: 92d717f520c1cd640af0b9a122692328,
         type: 2}
       propertyPath: fireForce
-      value: 4000
+      value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 114182107839329604, guid: 92d717f520c1cd640af0b9a122692328,
         type: 2}
@@ -9407,7 +9407,7 @@ Prefab:
     - target: {fileID: 114182107839329604, guid: 92d717f520c1cd640af0b9a122692328,
         type: 2}
       propertyPath: timeBetweenShots3
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114182107839329604, guid: 92d717f520c1cd640af0b9a122692328,
         type: 2}
@@ -9447,12 +9447,12 @@ Prefab:
     - target: {fileID: 114182107839329604, guid: 92d717f520c1cd640af0b9a122692328,
         type: 2}
       propertyPath: fireForce4
-      value: 6000
+      value: 3500
       objectReference: {fileID: 0}
     - target: {fileID: 114182107839329604, guid: 92d717f520c1cd640af0b9a122692328,
         type: 2}
       propertyPath: timeBetweenShots4
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 114182107839329604, guid: 92d717f520c1cd640af0b9a122692328,
         type: 2}
@@ -9463,6 +9463,11 @@ Prefab:
     - target: {fileID: 4821378782325352, guid: 92d717f520c1cd640af0b9a122692328, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114182107839329604, guid: 92d717f520c1cd640af0b9a122692328,
+        type: 2}
+      propertyPath: timeBetweenShots2
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61713711494006580, guid: 92d717f520c1cd640af0b9a122692328, type: 2}
@@ -10385,7 +10390,7 @@ MonoBehaviour:
   fireForce4: 6000
   timeBetweenShots: 0.3333
   timeBetweenShots2: 0.5
-  timeBetweenShots3: 5
+  timeBetweenShots3: 3
   timeBetweenShots4: 0.1
   StartPosition: {x: 0, y: 0, z: 0}
   RotatePosition: {x: 0, y: 0, z: 0, w: 0}
@@ -10405,7 +10410,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2136425936}
   life: {fileID: 2136425938}
-  explosion: {fileID: 0}
   Healthbar: {fileID: 187079286}
 --- !u!114 &2136425938
 MonoBehaviour:

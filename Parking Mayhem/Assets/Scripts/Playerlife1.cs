@@ -15,7 +15,7 @@ public class Playerlife1 : MonoBehaviour {
 
 	void Start () {
         health = GetComponent<Multlvlhealth1>();
-        maxLife = 25;
+        maxLife = 15;
         currentLife = maxLife;
       
 	}

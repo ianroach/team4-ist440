@@ -33,6 +33,7 @@ TagManager:
   - rapid
   - RapidDamage
   - RapidDamage2
+  - bullet
   layers:
   - Default
   - TransparentFX

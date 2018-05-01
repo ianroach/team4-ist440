@@ -20,12 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4089637847615292}
   - component: {fileID: 212490771844604298}
-  - component: {fileID: 114886650348433244}
   - component: {fileID: 58791370334466932}
-  - component: {fileID: 114808539437296548}
+  - component: {fileID: 114143990365833596}
+  - component: {fileID: 50495767094646690}
   m_Layer: 0
   m_Name: Planet_Earth
-  m_TagString: earth
+  m_TagString: Gsol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,6 +43,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50495767094646690
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120260263030844}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58791370334466932
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -58,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4
---- !u!114 &114808539437296548
+--- !u!114 &114143990365833596
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -66,21 +86,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1120260263030844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6c12c86c01a5da4ab5d532cb07a2633, type: 3}
+  m_Script: {fileID: 11500000, guid: c53857cae13b21e4bb47e7e21a5d5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sec: 14
---- !u!114 &114886650348433244
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1120260263030844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d9078f473ac5d54bab141141c0b46ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  rb: {fileID: 50495767094646690}
+  minSpeed: 50
+  maxSpeed: 50
 --- !u!212 &212490771844604298
 SpriteRenderer:
   m_ObjectHideFlags: 1

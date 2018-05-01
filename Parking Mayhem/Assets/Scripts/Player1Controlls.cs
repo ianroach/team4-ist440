@@ -226,18 +226,18 @@ public class Player1Controlls : MonoBehaviour
 		if (collision.tag == "ExtraDamage2") 
 		{
 			LittleExplosion ();
-			health.DealDamage (15);
+			health.DealDamage (20);
 			Destroy (collision.gameObject);
 		}
 		if (collision.tag == "DestroyDamage2")
 		{
-			health.DealDamage (50);
+			health.DealDamage (100);
 			Destroy (collision.gameObject);
 		}
 		if (collision.tag == "RapidDamage2") 
 		{
 			LittleExplosion ();
-			health.DealDamage (10);
+			health.DealDamage (5);
 			Destroy (collision.gameObject);
 		}
 

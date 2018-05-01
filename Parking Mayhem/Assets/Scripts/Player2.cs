@@ -213,19 +213,19 @@ void noGas()
 		if (collision.tag == "ExtraDamage") 
 		{
 			LittleExplosion ();
-			health.DealDamage (15);
+			health.DealDamage (20);
 			Destroy (collision.gameObject);
 		}
 		if (collision.tag == "DestroyDamage")
 		{
 			
-			health.DealDamage (50);
+			health.DealDamage (100);
 			Destroy (collision.gameObject);
 		}
 		if (collision.tag == "RapidDamage") 
 		{
 			LittleExplosion ();
-			health.DealDamage (10);
+			health.DealDamage (5);
 			Destroy (collision.gameObject);
 		}
 		if (collision.tag == "blaster")

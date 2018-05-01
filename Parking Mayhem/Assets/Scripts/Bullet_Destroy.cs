@@ -8,12 +8,16 @@ public class Bullet_Destroy : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+       
         if ((collision.tag == "Meteor"))
         {
+           
             if (collision.tag == "Meteor")
             {
                 Destroy(collision.gameObject);
+
             }
+         
             playExplosion();
         }
     }
@@ -22,6 +26,8 @@ public class Bullet_Destroy : MonoBehaviour {
     {
         GameObject explosion = (GameObject)Instantiate(ExplosionAnimate);
         explosion.transform.position = transform.position;
-    }
+
+       
 }
 
+    }

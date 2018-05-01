@@ -14,8 +14,13 @@ public class Meteor_Destroy : MonoBehaviour {
                 if (collision.tag == "Meteor")
                 {
                     Destroy(collision.gameObject);
+               
                 }
                 playExplosion();
+        }
+        if (collision.tag == "bullet")
+        {
+            ScoreManager.addScore(50);
         }
     }
 

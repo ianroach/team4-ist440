@@ -85,31 +85,31 @@ public class SpaceShipMovement : MonoBehaviour
                 Invoke("resetInvulnerability", 1);
                 Reset();
             }
-
-            if (collision.tag == "earth")
-            {
-				ScoreManager.addScore (100);
-
-
-                SceneManager.LoadScene(11);
-
-                StartCoroutine(ShowMessage("+100", 1));
-            }
-            else if (collision.gameObject.tag == "PickUp")
-            {
-                coinSoundEffect.Play();
-                Destroy(collision.gameObject);
-				ScoreManager.addScore (50);
-
-                StartCoroutine(ShowMessage("+50", 2));
-            }
-            else if (collision.gameObject.tag == "Stop")
-            {
-                Pickupsound.Play();
-                Destroy(collision.gameObject);
-            }
         }
-    }
+
+        else if (collision.tag == "Gsol")
+        {
+            ScoreManager.addScore(100);
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Loads the next scene in next sequential order //  
+
+            StartCoroutine(ShowMessage("+100", 1));
+        }
+        else if (collision.gameObject.tag == "PickUp")
+        {
+            coinSoundEffect.Play();
+            Destroy(collision.gameObject);
+            ScoreManager.addScore(50);
+
+            StartCoroutine(ShowMessage("+50", 2));
+        }
+        else if (collision.gameObject.tag == "Stop")
+        {
+            Pickupsound.Play();
+            Destroy(collision.gameObject);
+        }
+    } 
+    
 
     IEnumerator ShowMessage(string message, float delay)
     {
