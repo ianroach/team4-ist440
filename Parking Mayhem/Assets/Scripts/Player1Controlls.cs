@@ -71,28 +71,28 @@ public class Player1Controlls : MonoBehaviour
             curspeed *= maxspeed;
         }
 
-		if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.W))
+		if (Input.GetKey(KeyCode.Joystick2Button0) || Input.GetKey(KeyCode.W))
         {
             rigidbody2D.AddForce(transform.up * power);
             rigidbody2D.drag = friction;
 
         }
-        if (Input.GetKey(KeyCode.JoystickButton1) || Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.Joystick2Button1) || Input.GetKey(KeyCode.S))
         {
             rigidbody2D.AddForce(-(transform.up) * (power / 2));
             rigidbody2D.drag = friction;
 
         }
-        if (Input.GetAxis("Horizontal") == -1 || Input.GetKey(KeyCode.A))
+        if (Input.GetAxis("HorizontalMP2") == -1 || Input.GetKey(KeyCode.A))
         {
             transform.Rotate(Vector3.forward * turnpower);
         }
-        if (Input.GetAxis("Horizontal") == 1 || Input.GetKey(KeyCode.D))
+        if (Input.GetAxis("HorizontalMP2") == 1 || Input.GetKey(KeyCode.D))
         {
             transform.Rotate(Vector3.forward * -turnpower);
         }
 
-		if (Time.time >= timestamp && (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.Space)))
+		if (Time.time >= timestamp && (Input.GetKey(KeyCode.Joystick2Button4) || Input.GetKey(KeyCode.Space)))
         {
 			switch (typeshot){
 			case 1:

@@ -68,7 +68,7 @@ public class Player2 : MonoBehaviour {
 		curspeed *= maxspeed;
 	}
 
-		if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.UpArrow))
+		if (Input.GetKey(KeyCode.Joystick1Button0) || Input.GetKey(KeyCode.UpArrow))
 	{
 
 		rigidbody2D.AddForce(transform.up * power);
@@ -76,21 +76,21 @@ public class Player2 : MonoBehaviour {
 
 
 	}
-		if (Input.GetKey(KeyCode.JoystickButton1) || Input.GetKey(KeyCode.DownArrow))
+		if (Input.GetKey(KeyCode.Joystick1Button1) || Input.GetKey(KeyCode.DownArrow))
 	{
 		rigidbody2D.AddForce(-(transform.up) * (power / 2));
 		rigidbody2D.drag = friction;
 
 	}
-		if (Input.GetAxis("Horizontal") == -1 || Input.GetKey(KeyCode.LeftArrow))
+		if (Input.GetAxis("HorizontalMP1") == -1 || Input.GetKey(KeyCode.LeftArrow))
 	{
 		transform.Rotate(Vector3.forward * turnpower);
 	}
-		if (Input.GetAxis("Horizontal") == 1 || Input.GetKey(KeyCode.RightArrow))
+		if (Input.GetAxis("HorizontalMP1") == 1 || Input.GetKey(KeyCode.RightArrow))
 	{
 		transform.Rotate(Vector3.forward * -turnpower);
 	}
-		if (Time.time >= timestamp && (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.RightShift)))
+		if (Time.time >= timestamp && (Input.GetKey(KeyCode.Joystick1Button4) || Input.GetKey(KeyCode.RightShift)))
 	{
 			switch (typeshot){
 			case 1:
