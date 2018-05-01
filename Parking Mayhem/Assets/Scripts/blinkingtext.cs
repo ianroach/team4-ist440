@@ -20,11 +20,11 @@ public class blinkingtext : MonoBehaviour {
             {
                 case "0":
                     text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
-                    yield return new WaitForSeconds(1.5f);
+                    yield return new WaitForSeconds(1f);
                     break;
                 case "1":
                     text.color = new Color(text.color.r, text.color.g, text.color.b, 0);
-                    yield return new WaitForSeconds(1.5f);
+                    yield return new WaitForSeconds(1f);
                     break;
             }
         }
